@@ -1,0 +1,67 @@
+ /* w3schools,2023 */
+ body {
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    background:  #97E4E9 ;
+    text-align: center;
+    font-size: large;
+  }
+
+   /* w3schools,2023 */
+   .logo {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    width: 10%;
+    border-radius: 60%;
+    padding-top: 30px;
+}
+
+ /* w3schools,2023 */
+ .navigation {
+    overflow: hidden;
+    background-color: rgb(214, 120, 12);
+  }
+  
+  /* w3schools,2023 */
+  .navigation a {
+    float: left;
+    display: inline;
+    color: #000000;
+    text-align: center;
+    padding: 11px 14px;
+    text-decoration: none;
+    font-family: Impact, Haettenschweiler, 'Arial', sans-serif;
+    border-bottom: 3px solid transparent;
+  }
+
+  @media screen and (max-width: 768px) {
+    .leftcolumn, .rightcolumn{   
+      width: 100%;
+      padding: 0;
+    }
+  }
+      
+              .background .header {
+    background-color: #97E4E9;
+      background-repeat: no-repeat;
+      background-size: cover;
+      min-height: 100px;
+              }
+  
+              .header {
+      padding: 30px;
+      text-align: center;
+      background: rgb(226, 158, 11);
+    }
+     /* w3schools,2023 */
+     footer {
+      padding: 20px;
+      text-align: center;
+      background:  rgba(255, 178, 11, 0.863);
+      margin-top: 20px;
+    }
+    /* w3schools,2023 */
+    .navigation a {
+      float: none;
+      width: 100%;
+    }
