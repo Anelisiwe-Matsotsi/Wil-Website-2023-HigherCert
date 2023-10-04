@@ -31,7 +31,96 @@
 
 </div>
 
-<h1>Check Out</h1>
+<h1>Course Check Out Form</h1>
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Course Checkout</title>
+</head>
+<body>
+    <h1>Course Checkout</h1>
+    <form id="checkoutForm">
+        <label for="firstName">Name:</label>
+        <input type="text" id="firstName" required><br><br>
+
+        <label for="lastName">Surname:</label>
+        <input type="text" id="lastName" required><br><br>
+
+        <label for="educationLevel">Highest Education Level:</label>
+        <select id="educationLevel" required>
+            <option value="none">Select</option>
+            <option value="highSchool">High School</option>
+            <option value="bachelor">Bachelor's Degree</option>
+            <option value="master">Master's Degree</option>
+            <option value="phd">Ph.D.</option>
+        </select><br><br>
+
+        <label for="course">6 Month Courses:</label>
+        <select id="course" required>
+            <option value="none">Select</option>
+            <option value="firstAid">First Aid (R1500)</option>
+            <option value="sewing">Sewing (R1500)</option>
+            <option value="landscaping">Landscaping (R1500)</option>
+            <option value="lifeSkills">Life Skills (R1500)</option>
+        </select><br><br>
+
+        <label for="course">6 Weeks Courses:</label>
+        <select id="course" required>
+
+          <option value="none">Select</option>
+          <option value="childMinding">6-Week Child Minding (R750)</option>
+          <option value="cooking">Cooking (R750)</option>
+          <option value="gardenMaintenance">Garden Maintenance (R750)</option>
+          </select><br><br>
+
+        <label for="total">Total Fee:</label>
+        <input type="text" id="total" required><br><br>
+
+        <button type="button" onclick="calculateTotal()">Calculate Total</button>
+        <button type="submit">Submit</button>
+    </form>
+
+    <script>
+        function calculateTotal() {
+    const courseSelect = document.getElementById("course");
+    const totalInput = document.getElementById("total");
+
+    const courseValue = courseSelect.value;
+    let courseFee = 0;
+
+    switch (courseValue) {
+        case "firstAid":
+        case "sewing":
+        case "landscaping":
+        case "lifeSkills":
+            courseFee = 1500;
+            break;
+        case "childMinding":
+        case "cooking":
+        case "gardenMaintenance":
+            courseFee = 750;
+            break;
+            
+    }
+
+    totalInput.value = "R" + courseFee;
+}
+
+
+        document.getElementById("checkoutForm").addEventListener("submit", function (event) {
+            event.preventDefault();
+
+            // You can add code here to handle form submission, e.g., sending data to a server.
+        });
+    </script>
+</body>
+</html>
+
+ 
+
 
 <footer>
        
