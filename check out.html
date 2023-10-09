@@ -1,51 +1,171 @@
-<!DOCTYPE html> 
-<html>
-    <head>
-        <title>NICE ICE - home</title><!--(IIE, 2012)-->
+<!DOCTYPE html>
+<html lang="en">
+<head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, intial-scale=1.0">
-    <link rel="stylesheet" href="css\style.css"><!--geeksforgeeks, 2023--><!--w3schools,2023-->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>NICE ICE - Course Checkout</title>
+    <link rel="stylesheet" href="css/style.css">
     <style type="text/css">
-
- /*(IIE, 2012) */ 
-
- 
-        
-        </style>
-    </head>
-    <body>
-        <div class="background">
-            <div class="header"> <!--w3schools,2023-->
-               <div class="logo">
-                <a href="images/thumbnail_IMG_7280.jpg" >
-                  <img src="images/thumbnail_IMG_7280.jpg" height="200" width="200" alt="Empowering Logo"><!--canva,2023-->
+        /* Your additional CSS styles here */
+    </style>
+</head>
+<body>
+    <div class="background">
+        <div class="header">
+            <div class="logo">
+                <a href="images/thumbnail_IMG_7280.jpg">
+                    <img src="images/thumbnail_IMG_7280.jpg" height="200" width="200" alt="Empowering Logo">
                 </a>
             </div>
         </div>
-<div class="navigation">
-    <a href="home.html">Home</a>
-    <a href="six month courses.html">Six Month Courses</a>
-    <a href="six week courses.html">Six Week Courses</a>
-    <a href="check out.html">Check Out</a>
-    <a href="contact us.html">Contact us</a>
 
-</div>
+        <div class="navigation">
+            <a href="home.html">Home</a>
+            <a href="six month courses.html">Six Month Courses</a>
+            <a href="six week courses.html">Six Week Courses</a>
+            <a href="check out.html">Check Out</a>
+            <a href="contact us.html">Contact us</a>
+        </div>
 
-<h1>Check Out</h1>
+        <h1>Course Checkout</h1>
 
-<footer>
-       
-    <script>var theDate=new Date()
-      document.write(theDate.getFullYear())
-      var theDate=new Date()
-      document.write("&copy;" +
-      theDate.getFullYear())
-      document.write(" - Empowering Minds | Last modified: ")
-      var theModifiedDate=new
-      Date (document.lastModified)
-      document.write(theModifiedDate.toDateString())
-      </script>
-      <br>Powered by "sharp-sharp" Web Hosting
+        <form id="checkoutForm">
+            <label for="firstName">Name:</label>
+            <input type="text" id="firstName" required><br><br>
+
+            <label for="lastName">Surname:</label>
+            <input type="text" id="lastName" required><br><br>
+
+            <label for="educationLevel">Highest Education Level:</label>
+            <select id="educationLevel" required>
+                <option value="none">Select</option>
+                <option value="highSchool">High School</option>
+                <option value="bachelor">Bachelor's Degree</option>
+                <option value="master">Master's Degree</option>
+                <option value="phd">Ph.D.</option>
+            </select><br><br>
+
+            <label for="course">6 Month Courses:</label>
+            <select id="course1" required>
+                <option value="none">Select</option>
+                <option value="firstAid">First Aid (R1500)</option>
+                <option value="sewing">Sewing (R1500)</option>
+                <option value="landscaping">Landscaping (R1500)</option>
+                <option value="lifeSkills">Life Skills (R1500)</option>
+            </select><br><br>
+
+            <label for="course">6 Weeks Courses:</label>
+            <select id="course2" required>
+                <option value="none">Select</option>
+                <option value="childMinding">6-Week Child Minding (R750)</option>
+                <option value="cooking">Cooking (R750)</option>
+                <option value="gardenMaintenance">Garden Maintenance (R750)</option>
+            </select><br><br>
+
+            <label for="total">Total Fee:</label>
+            <input type="text" id="total" readonly><br><br>
+
+            <p id="discountInfo"></p>
+            <p id="bankInfo"></p>
+
+            <button type="button" onclick="calculateTotal()">Calculate Total</button>
+            <button type="submit">Submit</button>
+        </form>
+    </div>
+
+    <script>
+        const selectedCourses = {};
+
+        function calculateTotal() {
+            const courseSelect1 = document.getElementById("course1");
+            const courseSelect2 = document.getElementById("course2");
+            const totalInput = document.getElementById("total");
+            const discountInfo = document.getElementById("discountInfo");
+            const bankInfo = document.getElementById("bankInfo");
+
+            const courseValue1 = courseSelect1.value;
+            const courseValue2 = courseSelect2.value;
+
+            let courseFee1 = 0;
+            let courseFee2 = 0;
+
+            switch (courseValue1) {
+                case "firstAid":
+                case "sewing":
+                case "landscaping":
+                case "lifeSkills":
+                    courseFee1 = 1500;
+                    break;
+                default:
+                    courseFee1 = 0;
+                    break;
+            }
+
+            switch (courseValue2) {
+                case "childMinding":
+                case "cooking":
+                case "gardenMaintenance":
+                    courseFee2 = 750;
+                    break;
+                default:
+                    courseFee2 = 0;
+                    break;
+            }
+
+            selectedCourses[courseValue1] = courseFee1;
+            selectedCourses[courseValue2] = courseFee2;
+
+            // Calculate the total fee by summing the fees for all selected courses
+            let totalFee = 0;
+            for (const key in selectedCourses) {
+                if (selectedCourses.hasOwnProperty(key)) {
+                    totalFee += selectedCourses[key];
+                }
+            }
+
+            let discountPercentage = 0;
+
+            // Apply discounts based on the number of courses selected
+            const numSelectedCourses = Object.keys(selectedCourses).length;
+            if (numSelectedCourses === 2) {
+                discountPercentage = 5;
+            } else if (numSelectedCourses === 3) {
+                discountPercentage = 10;
+            } else if (numSelectedCourses > 3) {
+                discountPercentage = 15;
+            }
+
+            const discountAmount = (totalFee * discountPercentage / 100).toFixed(2);
+            totalFee -= discountAmount;
+
+            totalInput.value = "R" + totalFee.toFixed(2);
+
+            // Display discount and bank account information
+            discountInfo.textContent = `Discount: ${discountPercentage}%`;
+            bankInfo.textContent = `Bank Account Info:\nBank: Absa\nAccount Name: Empowering The Nation\nBranch: 000 000\nAccount Number: 0000 0000`;
+        }
+
+        document.getElementById("checkoutForm").addEventListener("submit", function (event) {
+            event.preventDefault();
+
+            // You can add code here to handle form submission, e.g., sending data to a server.
+        });
+    </script>
+
+    <footer>
+        <script>
+            var theDate = new Date()
+            document.write(theDate.getFullYear())
+            var theDate = new Date()
+            document.write("&copy;" + theDate.getFullYear())
+            document.write(" - Empowering Minds | Last modified: ")
+            var theModifiedDate = new Date(document.lastModified)
+            document.write(theModifiedDate.toDateString())
+        </script>
+        <br>Powered by "sharp-sharp" Web Hosting
     </footer>
-    </body>
+</body>
 </html>
+
+REFERENCE LIST
+<!--w3schools. 2023. Forms. [Online] Available at:https://www.w3schools.com/html/html_forms.asp[Acceesed 6 October 2023]-->
