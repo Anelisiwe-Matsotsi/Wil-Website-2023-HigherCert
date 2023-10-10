@@ -17,22 +17,80 @@
 }
 
  /* w3schools,2023 */
- .navigation {
-    overflow: hidden;
-    background-color: rgb(214, 120, 12);
-  }
-  
-  /* w3schools,2023 */
-  .navigation a {
-    float: left;
-    display: inline;
-    color: #000000;
-    text-align: center;
-    padding: 11px 14px;
-    text-decoration: none;
-    font-family: Impact, Haettenschweiler, 'Arial', sans-serif;
-    border-bottom: 3px solid transparent;
-  }
+/* The navigation menu */
+.navbar {
+  overflow: hidden;
+  background-color: #f4c313;
+  font-family: Impact, Haettenschweiler, 'Arial', sans-serif;
+}
+
+/* Navigation links */
+.navbar a {
+  float: left;
+  font-size: 16px;
+  color: rgb(22, 22, 22);
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+}
+
+/* The subnavigation menu */
+.subnav {
+  float: left;
+  overflow: hidden;
+
+}
+
+/* Subnav button */
+.subnav .subnavbtn {
+  font-size: 16px;
+  border: none;
+  outline: none;
+  color: rgb(1, 1, 1);
+  padding: 14px 16px;
+  background-color: inherit;
+  font-family: inherit;
+  margin: 0;
+  text-align: center;
+}
+
+/* Add a red background color to navigation links on hover */
+.navbar a:hover, .subnav:hover .subnavbtn {
+  background-color: rgb(229, 205, 110);
+}
+
+/* Style the subnav content - positioned absolute */
+.subnav-content {
+  display: none;
+  position: absolute;
+  left: 0;
+  background-color: rgb(243, 210, 80);
+  width: 100%;
+  z-index: 1;
+}
+
+/* Style the subnav links */
+.subnav-content a {
+  float: left;
+  color: rgb(21, 21, 21);
+  text-decoration: none;
+}
+
+/* Add a grey background color on hover */
+.subnav-content a:hover {
+  background-color: rgb(229, 205, 110);
+  color: black;
+}
+
+/* When you move the mouse over the subnav container, open the subnav content */
+.subnav:hover .subnav-content {
+  display: block;
+}
+ 
+
+
+   
+    
 
   @media screen and (max-width: 768px) {
     .leftcolumn, .rightcolumn{   
@@ -61,7 +119,6 @@
       margin-top: 20px;
     }
     /* w3schools,2023 */
-    .navigation a {
-      float: none;
-      width: 100%;
-    }
+    
+/*Reference list
+W3schools- [Online]. Available at:
