@@ -6,7 +6,80 @@
     <meta name="viewport" content="width=device-width, intial-scale=1.0">
     <link rel="stylesheet" href="css\style.css"><!--geeksforgeeks, 2023--><!--w3schools,2023-->
     <style type="text/css">
+* {
+  box-sizing: border-box;
+}
 
+body {
+  font-family: Arial, Helvetica, sans-serif;
+  height: 100%;
+  margin: 0;
+}
+
+/* Float four columns side by side */
+.column {
+  float: left;
+  width: 50%;
+  padding: 20px 10px;
+}
+
+/* Remove extra left and right margins, due to padding in columns */
+.row {margin: 0 60px;}
+
+/* Clear floats after the columns */
+.row:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+
+/* Style the counter cards */
+.card {
+  box-shadow: 0 12px 18px 0 rgba(7, 105, 44, 0.789); /* this adds the "card" effect */
+  padding: 16px;
+  text-align: center;
+  background-color: rgb(226, 158, 11);
+}
+
+/* Responsive columns - one column layout (vertical) on small screens */
+@media screen and (max-width: 600px) {
+  .column {
+    width: 100%;
+    display: block;
+    margin-bottom: 20px;
+  }
+}
+.bg {
+  /* The image used */
+  background-image: url("images/plantbg.jpg");
+
+  /* Full height */
+  height: 50%;
+
+  /* Center and scale the image nicely */
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.column2 {
+  float: left;
+}
+
+.left {
+  width: 25%;
+}
+
+.right {
+  width: 75%;
+}
+.row {
+  display: flex;
+}
+
+.column2 {
+  flex: 50%;
+}
  /*(IIE, 2012) */ 
 
  
@@ -51,11 +124,72 @@
     <a href="contact us.html">Contact</a>
   </div>
   
+  <div class="bg">
+    <h1 style="color: aliceblue;font-size: 85px;padding: 30px 20px;">SIX WEEK COURSES</h1>
+    <p>This example creates a full page background image. Try to resize the browser window to see how it always will cover the full screen (when scrolled to top), and that it scales nicely on all screen sizes.</p>
+  
+  
+  </div>
+  <hr>
+  <h1 class="h1">Six Week Courses</h1>
+  <div class="content">
+    <h2 style="align-items: center; font-size: medium; text-align: center;">About: EMPOWERING THE NATION</h2>
+  <p>Empowering the nation is a business that was established in 2018 in hopes to empower domeatic workers as
+       well as gardners all over Johannesburg with skills that can help them improve their wages.People are trained
+      on both six-month long Learnerships and six-week long Short Skills Training. </p> <!--IIE,2023-->
+      <br>
+  </div>
+  <div class="row">
+    <div class="column">
+      <div class="card">
+        <a href="Child Minding.html"><h2>Child Minding</h2></a>
+        <div class="trick">
+          <p>Empowering the nation is a business that was established in 2018 in hopes to empower domeatic workers as
+            well as gardners all over Johannesburg with skills that can help them improve their wages.People are trained
+           on both six-month long Learnerships and six-week long Short Skills Training</p>
+      </div>
+       
+    </div>
+    </div>
+    <div class="column">
+      <div class="card"><a href="Cooking.html"><h2>Cooking</h2></a>
+        <div class="trick">
+          <p>Empowering the nation is a business that was established in 2018 in hopes to empower domeatic workers as
+            well as gardners all over Johannesburg with skills that can help them improve their wages.People are trained
+           on both six-month long Learnerships and six-week long Short Skills Training</p>
+      </div>
+      </div>
+    </div>
+ 
+  
+  
+    <div class="column">
+      <div class="card"><a href="Garden Maintenance.html"><h2>Garden Maintainence</h2></a>
+        <div class="trick">
+          <p>Empowering the nation is a business that was established in 2018 in hopes to empower domeatic workers as
+            well as gardners all over Johannesburg with skills that can help them improve their wages.People are trained
+           on both six-month long Learnerships and six-week long Short Skills Training</p>
+      </div>
+      </div>
+    </div>
+  </div>
+  
+  <div class="row">
+    <div class="column2">
+      <p style="padding: 80px;">Empowering the nation is a business that was established in 2018 in hopes to empower domeatic workers as
+        well as gardners all over Johannesburg with skills that can help them improve their wages.People are trained
+       on both six-month long Learnerships and six-week long Short Skills Training</p>
+    </div>
+    <div class="column2">
+      <iframe width="550" height="480" src="https://www.youtube.com/embed/58cXgweaKm4" title="I Dare You To Disappear For 6 Months (Study Motivation)" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+    </div>
+  </div>
+  
 
-<h1>Six Week Courses</h1>
-<h2>Child Minding</h2><img src="images\Child Minding 1.jpg" height="200" width="200" alt="Empowering Logo">
-<h2>Cooking</h2><img src="images\Cooking.jpg" height="200" width="200" alt="Empowering Logo">
-<h2>Garden Maintenance</h2><img src="images\IMG_7277.jpeg" height="200" width="200" alt="Empowering Logo">
+
+<!--<img src="images\Child Minding 1.jpg" height="200" width="200" alt="Empowering Logo">
+<img src="images\Cooking.jpg" height="200" width="200" alt="Empowering Logo">
+<img src="images\IMG_7277.jpeg" height="200" width="200" alt="Empowering Logo">-->
 
 <footer>
        
