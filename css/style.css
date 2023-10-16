@@ -3,9 +3,13 @@
   border: 20px solid #97e4e9;
   background-color: white;
   text-align: center;
-  width: 90%;
+  width: 100%;
   margin: 0 auto;
   color: black;
+}
+.header 
+{
+  background-color:  #ffffff;
 }
 
  /* w3schools,2023 */
