@@ -1,15 +1,97 @@
 <!DOCTYPE html> 
 <html>
     <head>
-        <title>NICE ICE - home</title><!--(IIE, 2012)-->
+        <title>NICE - home</title><!--(IIE, 2012)-->
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, intial-scale=1.0">
     <link rel="stylesheet" href="css\style.css"><!--geeksforgeeks, 2023--><!--w3schools,2023-->
+   
+
     <style type="text/css">
+* {
+  box-sizing: border-box;
+}
+
+body {
+  font-family: Arial, Helvetica, sans-serif;
+  height: 100%;
+  margin: 0;
+}
+
+/* Float four columns side by side */
+.column {
+  float: left;
+  width: 50%;
+  padding: 20px 10px;
+}
+
+/* Remove extra left and right margins, due to padding in columns */
+.row {margin: 0 60px;}
+
+/* Clear floats after the columns */
+.row:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+
+/* Style the counter cards */
+.card {
+  box-shadow: 0 12px 18px 0 rgba(7, 105, 44, 0.789); /* this adds the "card" effect */
+  padding: 16px;
+  text-align: center;
+  background-color: rgb(226, 158, 11);
+}
+
+/* Responsive columns - one column layout (vertical) on small screens */
+@media screen and (max-width: 600px) {
+  .column {
+    width: 100%;
+    display: block;
+    margin-bottom: 20px;
+  }
+  .column2 {
+    width: 100%;
+    display: block;
+    margin-bottom: 20px;
+  }
+}
+.bg {
+  /* The image used */
+  background-image: url("images/plantbg.jpg");
+
+  /* Full height */
+  height: 50%;
+
+  /* Center and scale the image nicely */
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.column2 {
+  float: left;
+}
+
+.left {
+  width: 25%;
+}
+
+.right {
+  width: 75%;
+}
+.row {
+  display: flex;
+}
+
+.column2 {
+  flex: 50%;
+}
+
 
  /*(IIE, 2012) */ 
 
- 
+
         
         </style>
     </head>
@@ -22,13 +104,33 @@
                 </a>
             </div>
         </div>
-<div class="navigation">
-    <a href="home.html">Home</a>
-    <a href="six month courses.html">Six Month Courses</a>
-    <a href="six week courses.html">Six Week Courses</a>
-    <a href="check out.html">Check Out</a>
-    <a href="contact us.html">Contact us</a>
-
+        
+        <!-- Load font awesome icons -->
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+<!-- The navigation menu -->
+<div class="navbar">
+  <a href="home.html">Home</a>
+  <div class="subnav">
+    <button class="subnavbtn">Six Week Course <i class="fa fa-caret-down"></i></button>
+    <div class="subnav-content">
+      <a href="six week courses.html">Summary Of Six Week Courses</a>
+      <a href="Child Minding.html">Child Minding</a>
+      <a href="Cooking.html">Cooking</a>
+      <a href="Garden Maintenance.html">Garden Maintainence</a>
+    </div>
+  </div>
+  <div class="subnav">
+    <button class="subnavbtn">Six Month Course <i class="fa fa-caret-down"></i></button>
+    <div class="subnav-content">
+      <a href="six month courses.html">Summary Of Six Month Courses</a>
+      <a href="First Aid.html">First Aid</a>
+      <a href="Sewing.html">Sewing</a>
+      <a href="Landscaping.html">Landscaping</a>
+      <a href="Lifeskills.html">Life Skills</a>
+    </div>
+  </div>
+  <a href="check out.html">Check out</a>
+  <a href="contact us.html">Contact</a>
 </div>
 
 <h1>Six Month Courses</h1>
@@ -39,6 +141,85 @@
 
 <br>
     <a href="home.html"><button class="button-89" role="button">BACK</button></a><a href="six week courses.html"><button class="button-89" role="button">NEXT</button></a>
+
+<div class="bg">
+  <h1 style="color: aliceblue;font-size: 85px;padding: 30px 20px;">SIX MONTHS COURSES</h1>
+  <p>This example creates a full page background image. Try to resize the browser window to see how it always will cover the full screen (when scrolled to top), and that it scales nicely on all screen sizes.</p>
+
+
+</div>
+<hr>
+<h1 class="h1">Six Month Courses</h1>
+<div class="content">
+  <h2 style="align-items: center; font-size: medium; text-align: center;">About: EMPOWERING THE NATION</h2>
+<p>Empowering the nation is a business that was established in 2018 in hopes to empower domeatic workers as
+     well as gardners all over Johannesburg with skills that can help them improve their wages.People are trained
+    on both six-month long Learnerships and six-week long Short Skills Training. </p> <!--IIE,2023-->
+    <br>
+</div>
+
+<img src="images\IMG_7279.jpeg" alt="Avatar" style="border-radius: 50%; width: 400px; height: 250px;"> 
+<img src="images\IMG_7272.jpeg" alt="Avatar" style="border-radius: 50%; width: 400px; height: 250px;"> 
+
+<div class="row">
+  <div class="column">
+    <div class="card">
+      <a href="First Aid.html"><h2>First Aid</h2></a>
+      <div class="trick">
+        <p>Empowering the nation is a business that was established in 2018 in hopes to empower domeatic workers as
+          well as gardners all over Johannesburg with skills that can help them improve their wages.People are trained
+         on both six-month long Learnerships and six-week long Short Skills Training</p>
+    </div>
+     
+  </div>
+  </div>
+  <div class="column">
+    <div class="card"><a href="Sewing.html"><h2>Sewing</h2></a>
+      <div class="trick">
+        <p>Empowering the nation is a business that was established in 2018 in hopes to empower domeatic workers as
+          well as gardners all over Johannesburg with skills that can help them improve their wages.People are trained
+         on both six-month long Learnerships and six-week long Short Skills Training</p>
+    </div>
+    </div>
+  </div>
+</div>
+
+<img src="images\IMG_7274.jpeg" alt="Avatar" style="border-radius: 50%; width: 400px; height: 250px;">
+<img src="images\IMG_7273.jpeg" alt="Avatar" style="border-radius: 50%; width: 400px; height: 250px;"> 
+
+
+  <div class="row">
+  <div class="column">
+    <div class="card"><a href="Landscaping.html"><h2>Landscaping</h2></a>
+      <div class="trick">
+        <p>Empowering the nation is a business that was established in 2018 in hopes to empower domeatic workers as
+          well as gardners all over Johannesburg with skills that can help them improve their wages.People are trained
+         on both six-month long Learnerships and six-week long Short Skills Training</p>
+    </div>
+    </div>
+  </div>
+  <div class="column">
+    <div class="card"> <a href="Lifeskills.html"><h2>Life Skills</h2></a>
+      <div class="trick">
+        <p>Empowering the nation is a business that was established in 2018 in hopes to empower domeatic workers as
+          well as gardners all over Johannesburg with skills that can help them improve their wages.People are trained
+         on both six-month long Learnerships and six-week long Short Skills Training</p>
+    </div>
+    </div>
+  </div>
+</div>
+<div class="row">
+  <div class="column2">
+    <p style="padding: 80px;">Empowering the nation is a business that was established in 2018 in hopes to empower domeatic workers as
+      well as gardners all over Johannesburg with skills that can help them improve their wages.People are trained
+     on both six-month long Learnerships and six-week long Short Skills Training</p>
+  </div>
+  <div class="column2">
+    <iframe width="550" height="480" src="https://www.youtube.com/embed/58cXgweaKm4" title="I Dare You To Disappear For 6 Months (Study Motivation)" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+  </div>
+</div>
+
+
 <footer>
        
     <script>var theDate=new Date()
@@ -55,3 +236,7 @@
     </footer>
     </body>
 </html>
+<!--References
+ Available at: https://www.w3schools.com/howto/howto_css_full_page.asp
+ https://www.w3schools.com/howto/howto_css_column_cards.asp
+-->

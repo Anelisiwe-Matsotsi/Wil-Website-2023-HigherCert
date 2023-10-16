@@ -24,16 +24,37 @@
                 </a>
             </div>
         </div>
-<div class="navigation">
+        
+        <!-- Load font awesome icons -->
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+<!-- The navigation menu -->
+<div class="navbar">
     <a href="home.html">Home</a>
-    <a href="six month courses.html">Six Month Courses</a>
-    <a href="six week courses.html">Six Week Courses</a>
-    <a href="check out.html">Check Out</a>
-    <a href="contact us.html">Contact us</a>
+    <div class="subnav">
+      <button class="subnavbtn">Six Week Course <i class="fa fa-caret-down"></i></button>
+      <div class="subnav-content">
+        <a href="six week courses.html">Summary Of Six Week Courses</a>
+        <a href="Child Minding.html">Child Minding</a>
+        <a href="Cooking.html">Cooking</a>
+        <a href="Garden Maintenance.html">Garden Maintainence</a>
+      </div>
+    </div>
+    <div class="subnav">
+      <button class="subnavbtn">Six Month Course <i class="fa fa-caret-down"></i></button>
+      <div class="subnav-content">
+        <a href="six month courses.html">Summary Of Six Month Courses</a>
+        <a href="First Aid.html">First Aid</a>
+        <a href="Sewing.html">Sewing</a>
+        <a href="Landscaping.html">Landscaping</a>
+        <a href="Lifeskills.html">Life Skills</a>
+      </div>
+    </div>
+    <a href="check out.html">Check out</a>
+    <a href="contact us.html">Contact</a>
+  </div>
+  
 
-</div>
-
-<h1>Garden Maintenance</h1>
+<h1 class="h1">Garden Maintenance</h1>
 
 
 <p style="text-align: center;
@@ -42,6 +63,9 @@ background-color: white;">This course's purpose is to provide essential informat
      and understanding the watering needs of indigenous and exotic plants, trimming and the process of multiplying plants, as well as methods for 
      planting various kinds of plants. Every session will start at 11:30am till 13:00pm on Monday, Tuesday, and Thursday.
  </p>
+
+ <img src="images\gardenWork.jpg" alt="Avatar" style="border-radius: 50%; width: 400px;">
+
 <p style="text-align: center;
 background-color: white; width:20%">Price: R750</p>
 <p style="text-align: center;
@@ -51,7 +75,7 @@ background-color: white; width: 30%; height: 40px;">Book Course</p>
 <br>
 <br>
 <img src="images\gardenMaintenance.jpg" height="200" width="200" alt="Garden maintenace" style="margin-right: 50px;">
-<img src="images\gardenWork.jpg" height="200" width="200" alt="Garden Work">
+
 <footer>
        
     <script>var theDate=new Date()

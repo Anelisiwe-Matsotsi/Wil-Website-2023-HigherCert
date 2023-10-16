@@ -4,12 +4,149 @@
         <title>NICE ICE - home</title><!--(IIE, 2012)-->
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, intial-scale=1.0">
+    
     <link rel="stylesheet" href="css\style.css"><!--geeksforgeeks, 2023--><!--w3schools,2023-->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
     <style type="text/css">
 
- /*(IIE, 2012) */ 
+/* The navigation menu */
 
- 
+/* Style all font awesome icons */
+.fa {
+  font-size: 30px;
+  width: 50px;
+  text-align: center;
+  text-decoration: none;
+}
+
+/* Add a hover effect if you want */
+.fa:hover {
+  opacity: 0.7;
+}
+
+/* Set a specific color for each brand */
+
+/* Facebook */
+.fa-facebook {
+  background: #3B5998;
+  color: white;
+}
+
+/* Twitter */
+.fa-twitter {
+  background: #55ACEE;
+  color: white;
+}
+
+ /* Create three equal columns that floats next to each other */
+.column {
+  float: left;
+  width: 33.33%;
+}
+
+/* Clear floats after the columns */
+.row::after {
+  content: "";
+  display: table;
+  clear: both;
+}
+/* Responsive layout - makes the three columns stack on top of each other instead of next to each other */
+@media screen and (max-width:600px) {
+  .column {
+    width: 100%;
+  }
+   .col{
+    width: 100%;
+  }
+}
+.row{
+    width: 95%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding-right: 70px;
+}
+.col{
+    flex-basis: 22%;
+    text-align: center;
+    color: #555;
+    margin-right: 10px;
+    margin-bottom: 20px;
+}
+.counter-box{
+    width: 150px;
+    height: 200px;
+    background: #12192c;
+    padding: 20px 15px;
+    border-radius: 10px;
+    box-shadow: 0 0 20px -4px #66676c;
+    color:#fff;
+}
+h2,span{
+    display: inline-block;
+    margin: 10px 0;
+  
+}
+.counter-box .fa{
+    font-size: 40px;
+    color: rgba(16, 211, 97, 0.603);
+    display: block;
+}
+/* Three columns side by side */
+.column2 {
+  float: left;
+  width: 33.3%;
+  margin-bottom: 16px;
+  padding: 0 8px;
+}
+
+/* Display the columns below each other instead of side by side on small screens */
+@media screen and (max-width: 650px) {
+  .column2 {
+    width: 100%;
+    display: block;
+  }
+}
+
+/* Add some shadows to create a card effect */
+.card {
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+}
+
+/* Some left and right padding inside the container */
+.container {
+  padding: 0 16px;
+}
+
+/* Clear floats */
+.container::after, .row::after {
+  content: "";
+  clear: both;
+  display: table;
+}
+
+.title {
+  color: grey;
+}
+
+.button {
+  border: none;
+  outline: 0;
+  display: inline-block;
+  padding: 8px;
+  color: white;
+  background-color: #000;
+  text-align: center;
+  cursor: pointer;
+  width: 100%;
+}
+
+.button:hover {
+  background-color: #555;
+}
+
+
         
         </style>
     </head>
@@ -22,21 +159,209 @@
                 </a>
             </div>
         </div>
-<div class="navigation">
-    <a href="home.html">Home</a>
-    <a href="six month courses.html">Six Month Courses</a>
-    <a href="six week courses.html">Six Week Courses</a>
-    <a href="check out.html">Check Out</a>
-    <a href="contact us.html">Contact us</a>
 
+      
+
+
+        <!-- Load font awesome icons -->
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+<!-- The navigation menu -->
+<div class="navbar">
+  <a href="home.html">Home</a>
+  <div class="subnav">
+    <button class="subnavbtn">Six Week Course <i class="fa fa-caret-down"></i></button>
+    <div class="subnav-content">
+      <a href="six week courses.html">Summary Of Six Week Courses</a>
+      <a href="Child Minding.html">Child Minding</a>
+      <a href="Cooking.html">Cooking</a>
+      <a href="Garden Maintenance.html">Garden Maintainence</a>
+    </div>
+  </div>
+  <div class="subnav">
+    <button class="subnavbtn">Six Month Course <i class="fa fa-caret-down"></i></button>
+    <div class="subnav-content">
+      <a href="six month courses.html">Summary Of Six Month Courses</a>
+      <a href="First Aid.html">First Aid</a>
+      <a href="Sewing.html">Sewing</a>
+      <a href="Landscaping.html">Landscaping</a>
+      <a href="Lifeskills.html">Life Skills</a>
+    </div>
+  </div>
+  <a href="check out.html">Check out</a>
+  <a href="contact us.html">Contact</a>
 </div>
 
-<h1>Home Page</h1>
-<p>images:Helping hands, Domestic Training Awards, Garden Skills Training</p>
+
+
+
+<h1 class="h1">Home Page</h1>
+
+<!--Slideshow welcome-->
+<!-- Slideshow container -->
+<div class="slideshow-container">
+
+  <!-- Full-width images with number and caption text -->
+  <div class="mySlides fade">
+    <div class="numbertext">1 / 3</div>
+    <img src="images\Baby.jpg" style="width:100%; height: 350px">
+    <div class="text2">Empowering Every Mind</div>
+    <div class="text"><a href="#" class="fa fa-facebook"></a>
+      <a href="#" class="fa fa-twitter"></a></div>
+  </div>
+
+  <div class="mySlides fade">
+    <div class="numbertext">2 / 3</div>
+    <img src="images\IMG_7279.jpeg" style="width:100%; height: 350px">
+    <div class="text2">Empowering Every Mind</div>
+    <div class="text"><a href="#" class="fa fa-facebook"></a>
+<a href="#" class="fa fa-twitter"></a></div>
+  </div>
+
+  <div class="mySlides fade">
+    <div class="numbertext">3 / 3</div>
+    <img src="images\IMG_7270.jpeg" style="width:100%; height: 350px">
+    <div class="text2">Empowering Every Mind</div>
+    <div class="text"><a href="#" class="fa fa-facebook"></a>
+      <a href="#" class="fa fa-twitter"></a></div>
+  </div>
+
+  <!-- Next and previous buttons -->
+  <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
+  <a class="next" onclick="plusSlides(1)">&#10095;</a>
+</div>
+<br>
+
+<!-- The dots/circles -->
+<div style="text-align:center">
+  <span class="dot" onclick="currentSlide(1)"></span>
+  <span class="dot" onclick="currentSlide(2)"></span>
+  <span class="dot" onclick="currentSlide(3)"></span>
+</div>
+
+<div class="content">
+  <h2 style="align-items: center; font-size: medium; text-align: center;">About: EMPOWERING THE NATION</h2>
 <p>Empowering the nation is a business that was established in 2018 in hopes to empower domeatic workers as
      well as gardners all over Johannesburg with skills that can help them improve their wages.People are trained
     on both six-month long Learnerships and six-week long Short Skills Training. </p> <!--IIE,2023-->
     <a href="six month courses.html"><button class="button-89" role="button">NEXT</button></a> 
+    <br>
+<br>c:\Users\lab_services_student\AppData\Local\Programs\Microsoft VS Code\resources\app\out\vs\code\electron-sandbox\workbench\workbench.html
+    <img src="images\cookingClass.jpg" alt="Avatar" style="border-radius: 50%;">
+     <img src="images\gardenMaintenance.jpg" alt="Avatar" style="border-radius: 50%;">
+      <img src="images\Children.jpg" alt="Avatar" style="border-radius: 50%;"> <img src="images\IMG_7275.jpeg" alt="Avatar" style="border-radius: 50%;">
+    </div>
+</div>
+
+<div class="content">
+  <div class="trick">
+<div class="row">
+  <div class="column">
+    <p> <img src="images\IMG_7270.jpeg" style="width: 500px; height: 300px"></p>
+  </div>
+  
+  <div class="column">
+    <h2>Stats</h2>
+    <div class="row">
+      <div class="col">
+          <div class="counter-box">
+              <i class="fa fa-BOOK"></i>
+              <h2 class="counter">215</h2><span>k</span>
+              <h4>PROJECTS</h4>
+          </div>
+      </div>
+      <div class="col">
+          <div class="counter-box">
+              <i class="fa fa-users"></i>
+              <h2 class="counter">101</h2>
+              <h4>HAPPY CLIENTS</h4>
+          </div>
+      </div>
+      <div class="col">
+          <div class="counter-box">
+              <i class="fa fa-USER"></i>
+              <h2 class="counter">205</h2>
+              <h4>TRAINED STUDENTS</h4>
+          </div>
+      </div>
+      <div class="col">
+          <div class="counter-box">
+              <i class="fa fa-globe"></i>
+              <h2 class="counter">105</h2>
+              <h4>VISITED COUNTRIES</h4>
+          </div>
+      </div>
+  </div>
+  </div>
+</div>
+  </div>
+</div>
+
+<h3>Meet The Founders</h3>
+<div class="row">
+  <div class="column2">
+    <div class="card">
+      <img src="avatar.png" alt="Jane" class="avatar" style="width:100%">
+      <div class="container">
+        <h2>Jane Doe</h2>
+        <p class="title">CEO &amp; Founder</p>
+        <p>Some text that describes me lorem ipsum ipsum lorem.</p>
+        <p>example@example.com</p>
+        <p><button class="button">Contact</button></p>
+      </div>
+    </div>
+  </div>
+
+  <div class="column2">
+    <div class="card">
+      <img src="img2.jpg" alt="Mike" style="width:100%">
+      <div class="container">
+        <h2>Mike Ross</h2>
+        <p class="title">Art Director</p>
+        <p>Some text that describes me lorem ipsum ipsum lorem.</p>
+        <p>example@example.com</p>
+        <p><button class="button">Contact</button></p>
+      </div>
+    </div>
+  </div>
+
+  <div class="column2">
+    <div class="card">
+      <img src="img3.jpg" alt="John" style="width:100%">
+      <div class="container">
+        <h2>John Doe</h2>
+        <p class="title">Designer</p>
+        <p>Some text that describes me lorem ipsum ipsum lorem.</p>
+        <p>example@example.com</p>
+        <p><button class="button">Contact</button></p>
+      </div>
+    </div>
+  </div>
+</div>
+<hr style="width: 50%">
+
+
+<!--Testimonials-->
+
+
+
+
+<script>let slideIndex = 0;
+  showSlides();
+  
+  function showSlides() {
+    let i;
+    let slides = document.getElementsByClassName("mySlides");
+    for (i = 0; i < slides.length; i++) {
+      slides[i].style.display = "none";
+    }
+    slideIndex++;
+    if (slideIndex > slides.length) {slideIndex = 1}
+    slides[slideIndex-1].style.display = "block";
+    setTimeout(showSlides, 5000); // Change image every 2 seconds
+  }
+  </script>
+
     <footer>
        
         <script>var theDate=new Date()
@@ -53,3 +378,13 @@
         </footer>
         </body>
 </html>
+
+<!--
+REFERENCE LIST
+W3schools, Avalaible at:https://www.w3schools.com/howto/howto_js_slideshow.asp
+W3schoools, Available at:https://www.w3schools.com/css/css_website_layout.asp
+W3schools Available at:https://www.w3schools.com/howto/howto_css_rounded_images.asp
+Available at:https://www.learningrobo.com/2021/10/counter-up-animation-on-scroll-using.html
+
+
+-->
