@@ -66,22 +66,39 @@
                 <option value="phd">Ph.D.</option>
             </select><br><br>
 
-            <label for="course">6 Month Courses:</label>
-            <select id="course1" required>
-                <option value="none">Select</option>
-                <option value="firstAid">First Aid (R1500)</option>
-                <option value="sewing">Sewing (R1500)</option>
-                <option value="landscaping">Landscaping (R1500)</option>
-                <option value="lifeSkills">Life Skills (R1500)</option>
-            </select><br><br>
-
-            <label for="course">6 Weeks Courses:</label>
-            <select id="course2" required>
-                <option value="none">Select</option>
-                <option value="childMinding">6-Week Child Minding (R750)</option>
-                <option value="cooking">Cooking (R750)</option>
-                <option value="gardenMaintenance">Garden Maintenance (R750)</option>
-            </select><br><br>
+            <h1>6 Month Courses</h1>
+            <label class="container">
+                <input type="checkbox" id="firstAid"> First Aid (R1500)
+                <div id="firstAidCost" class="course-cost">Cost: R1500</div>
+            </label><br>
+            <label class="container">
+                <input type="checkbox" id="sewing"> Sewing 
+                <div id="sewingCost" class="course-cost">Cost: R1500</div>
+            </label><br>
+            <label class="container">
+                <input type="checkbox" id="landscaping"> Landscaping 
+                <div id="landscapingCost" class="course-cost">Cost: R1500</div>
+            </label><br>
+            <label class="container">
+                <input type="checkbox" id="lifeSkills"> Life Skills 
+                <div id="lifeSkillsCost" class="course-cost">Cost: R1500</div>
+            </label><br>
+            
+            <h1>6 Week Courses</h1>
+            <label class="container">
+                <input type="checkbox" id="childMinding"> Child Minding 
+                <div id="childMindingCost" class="course-cost">Cost: R750</div>
+            </label><br>
+            <label class="container">
+                <input type="checkbox" id="cooking"> Cooking 
+                <div id="cookingCost" class="course-cost">Cost: R750</div>
+            </label><br>
+            <label class="container">
+                <input type="checkbox" id="gardenMaintenance"> Garden Maintenance 
+                <div id="gardenMaintenanceCost" class="course-cost">Cost: R750</div>
+            </label><br>
+             
+                
 
             <label for="total">Total Fee:</label>
             <input type="text" id="total" readonly><br><br>
@@ -97,74 +114,74 @@
     <script>
         const selectedCourses = {};
 
-        function calculateTotal() {
-            const courseSelect1 = document.getElementById("course1");
-            const courseSelect2 = document.getElementById("course2");
-            const totalInput = document.getElementById("total");
-            const discountInfo = document.getElementById("discountInfo");
-            const bankInfo = document.getElementById("bankInfo");
+function updateCourseCost(courseId) {
+    const courseCostElement = document.getElementById(courseId + "Cost");
+    const courseFees = {
+        firstAid: 1500,
+        sewing: 1500,
+        landscaping: 1500,
+        lifeSkills: 1500,
+        childMinding: 750,
+        cooking: 750,
+        gardenMaintenance: 750,
+    };
 
-            const courseValue1 = courseSelect1.value;
-            const courseValue2 = courseSelect2.value;
+    if (selectedCourses[courseId]) {
+        courseCostElement.textContent = `Cost: R${courseFees[courseId]}`;
+    } else {
+        courseCostElement.textContent = "";
+    }
+}
 
-            let courseFee1 = 0;
-            let courseFee2 = 0;
+function calculateTotal() {
+    const totalInput = document.getElementById("total");
+    const discountInfo = document.getElementById("discountInfo");
+    const bankInfo = document.getElementById("bankInfo");
 
-            switch (courseValue1) {
-                case "firstAid":
-                case "sewing":
-                case "landscaping":
-                case "lifeSkills":
-                    courseFee1 = 1500;
-                    break;
-                default:
-                    courseFee1 = 0;
-                    break;
-            }
+    const courseCheckboxes = document.querySelectorAll("input[type='checkbox']");
 
-            switch (courseValue2) {
-                case "childMinding":
-                case "cooking":
-                case "gardenMaintenance":
-                    courseFee2 = 750;
-                    break;
-                default:
-                    courseFee2 = 0;
-                    break;
-            }
+    let totalFee = 0;
 
-            selectedCourses[courseValue1] = courseFee1;
-            selectedCourses[courseValue2] = courseFee2;
-
-            // Calculate the total fee by summing the fees for all selected courses
-            let totalFee = 0;
-            for (const key in selectedCourses) {
-                if (selectedCourses.hasOwnProperty(key)) {
-                    totalFee += selectedCourses[key];
-                }
-            }
-
-            let discountPercentage = 0;
-
-            // Apply discounts based on the number of courses selected
-            const numSelectedCourses = Object.keys(selectedCourses).length;
-            if (numSelectedCourses === 2) {
-                discountPercentage = 5;
-            } else if (numSelectedCourses === 3) {
-                discountPercentage = 10;
-            } else if (numSelectedCourses > 3) {
-                discountPercentage = 15;
-            }
-
-            const discountAmount = (totalFee * discountPercentage / 100).toFixed(2);
-            totalFee -= discountAmount;
-
-            totalInput.value = "R" + totalFee.toFixed(2);
-
-            // Display discount and bank account information
-            discountInfo.textContent = `Discount: ${discountPercentage}%`;
-            bankInfo.textContent = `Bank Account Info:\nBank: Absa\nAccount Name: Empowering The Nation\nBranch: 000 000\nAccount Number: 0000 0000`;
+    courseCheckboxes.forEach(checkbox => {
+        const courseId = checkbox.id;
+        if (checkbox.checked) {
+            selectedCourses[courseId] = true;
+            totalFee += courseFees[courseId];
+        } else {
+            delete selectedCourses[courseId];
         }
+
+        updateCourseCost(courseId);
+    });
+
+    totalInput.value = "R" + totalFee.toFixed(2);
+
+    // Apply discounts based on the number of selected courses
+    const numSelectedCourses = Object.keys(selectedCourses).length;
+    let discountPercentage = 0;
+
+    if (numSelectedCourses === 2) {
+        discountPercentage = 5;
+    } else if (numSelectedCourses === 3) {
+        discountPercentage = 10;
+    } else if (numSelectedCourses > 3) {
+        discountPercentage = 15;
+    }
+
+    const discountAmount = (totalFee * (discountPercentage / 100)).toFixed(2);
+    totalFee -= discountAmount;
+
+    // Display discount and bank account information
+    discountInfo.textContent = `Discount: ${discountPercentage}%`;
+    bankInfo.textContent = "Bank Account Info:\nBank: Absa\nAccount Name: Empowering The Nation\nBranch: 000 000\nAccount Number: 0000 0000";
+}
+
+// Add event listeners to all course checkboxes
+const courseCheckboxes = document.querySelectorAll("input[type='checkbox']");
+courseCheckboxes.forEach(checkbox => {
+    checkbox.addEventListener("change", calculateTotal);
+});
+
 
         document.getElementById("checkoutForm").addEventListener("submit", function (event) {
             event.preventDefault();
