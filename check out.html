@@ -18,35 +18,34 @@
                 </a>
             </div>
         </div>
-        
+
         <!-- Load font awesome icons -->
-<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-<!-- The navigation menu -->
-<div class="navbar">
-    <a href="home.html">Home</a>
-    <div class="subnav">
-      <button class="subnavbtn">Six Week Course <i class="fa fa-caret-down"></i></button>
-      <div class="subnav-content">
-        <a href="six week courses.html">Summary Of Six Week Courses</a>
-        <a href="Child Minding.html">Child Minding</a>
-        <a href="Cooking.html">Cooking</a>
-        <a href="Garden Maintenance.html">Garden Maintainence</a>
-      </div>
-    </div>
-    <div class="subnav">
-      <button class="subnavbtn">Six Month Course <i class="fa fa-caret-down"></i></button>
-      <div class="subnav-content">
-        <a href="six month courses.html">Summary Of Six Month Courses</a>
-        <a href="First Aid.html">First Aid</a>
-        <a href="Sewing.html">Sewing</a>
-        <a href="Landscaping.html">Landscaping</a>
-        <a href="Lifeskills.html">Life Skills</a>
-      </div>
-    </div>
-    <a href="check out.html">Check out</a>
-    <a href="contact us.html">Contact</a>
-  </div>
-  
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+        <!-- The navigation menu -->
+        <div class="navbar">
+            <a href="home.html">Home</a>
+            <div class="subnav">
+              <button class="subnavbtn">Six Week Course <i class="fa fa-caret-down"></i></button>
+              <div class="subnav-content">
+                <a href="six week courses.html">Summary Of Six Week Courses</a>
+                <a href="Child Minding.html">Child Minding</a>
+                <a href="Cooking.html">Cooking</a>
+                <a href="Garden Maintenance.html">Garden Maintenance</a>
+              </div>
+            </div>
+            <div class="subnav">
+              <button class="subnavbtn">Six Month Course <i class="fa fa-caret-down"></i></button>
+              <div class="subnav-content">
+                <a href="six month courses.html">Summary Of Six Month Courses</a>
+                <a href="First Aid.html">First Aid</a>
+                <a href="Sewing.html">Sewing</a>
+                <a href="Landscaping.html">Landscaping</a>
+                <a href="LifeSkills.html">Life Skills</a>
+              </div>
+            </div>
+            <a href="check out.html">Check out</a>
+            <a href="contact us.html">Contact</a>
+        </div>
 
         <h1 class="h1">Course Checkout</h1>
 
@@ -54,7 +53,7 @@
             <label for="firstName">Name:</label>
             <input type="text" id="firstName" required><br><br>
 
-            <label for="lastName">Surname:</label>
+            <label for "lastName">Surname:</label>
             <input type="text" id="lastName" required><br><br>
 
             <label for="educationLevel">Highest Education Level:</label>
@@ -72,33 +71,31 @@
                 <div id="firstAidCost" class="course-cost">Cost: R1500</div>
             </label><br>
             <label class="container">
-                <input type="checkbox" id="sewing"> Sewing 
+                <input type="checkbox" id="sewing"> Sewing (R1500)
                 <div id="sewingCost" class="course-cost">Cost: R1500</div>
             </label><br>
             <label class="container">
-                <input type="checkbox" id="landscaping"> Landscaping 
+                <input type="checkbox" id="landscaping"> Landscaping (R1500)
                 <div id="landscapingCost" class="course-cost">Cost: R1500</div>
             </label><br>
             <label class="container">
-                <input type="checkbox" id="lifeSkills"> Life Skills 
+                <input type="checkbox" id="lifeSkills"> Life Skills (R1500)
                 <div id="lifeSkillsCost" class="course-cost">Cost: R1500</div>
             </label><br>
-            
+
             <h1>6 Week Courses</h1>
             <label class="container">
-                <input type="checkbox" id="childMinding"> Child Minding 
+                <input type="checkbox" id="childMinding"> Child Minding (R750)
                 <div id="childMindingCost" class="course-cost">Cost: R750</div>
             </label><br>
             <label class="container">
-                <input type="checkbox" id="cooking"> Cooking 
+                <input type="checkbox" id="cooking"> Cooking (R750)
                 <div id="cookingCost" class="course-cost">Cost: R750</div>
             </label><br>
             <label class="container">
-                <input type="checkbox" id="gardenMaintenance"> Garden Maintenance 
+                <input type="checkbox" id="gardenMaintenance"> Garden Maintenance (R750)
                 <div id="gardenMaintenanceCost" class="course-cost">Cost: R750</div>
             </label><br>
-             
-                
 
             <label for="total">Total Fee:</label>
             <input type="text" id="total" readonly><br><br>
@@ -111,77 +108,79 @@
         </form>
     </div><br>
     <a href="six week courses.html"><button class="button-89" role="button">BACK</button></a><a href="contact us.html"><button class="button-89" role="button">NEXT</button></a>
+
     <script>
+        const courseFees = {
+            firstAid: 1500,
+            sewing: 1500,
+            landscaping: 1500,
+            lifeSkills: 1500,
+            childMinding: 750,
+            cooking: 750,
+            gardenMaintenance: 750,
+        };
+
         const selectedCourses = {};
 
-function updateCourseCost(courseId) {
-    const courseCostElement = document.getElementById(courseId + "Cost");
-    const courseFees = {
-        firstAid: 1500,
-        sewing: 1500,
-        landscaping: 1500,
-        lifeSkills: 1500,
-        childMinding: 750,
-        cooking: 750,
-        gardenMaintenance: 750,
-    };
+        function updateCourseCost(courseId) {
+            const courseCostElement = document.getElementById(courseId + "Cost");
+            const courseFee = courseFees[courseId];
 
-    if (selectedCourses[courseId]) {
-        courseCostElement.textContent = `Cost: R${courseFees[courseId]}`;
-    } else {
-        courseCostElement.textContent = "";
-    }
-}
-
-function calculateTotal() {
-    const totalInput = document.getElementById("total");
-    const discountInfo = document.getElementById("discountInfo");
-    const bankInfo = document.getElementById("bankInfo");
-
-    const courseCheckboxes = document.querySelectorAll("input[type='checkbox']");
-
-    let totalFee = 0;
-
-    courseCheckboxes.forEach(checkbox => {
-        const courseId = checkbox.id;
-        if (checkbox.checked) {
-            selectedCourses[courseId] = true;
-            totalFee += courseFees[courseId];
-        } else {
-            delete selectedCourses[courseId];
+            if (selectedCourses[courseId]) {
+                courseCostElement.textContent = `Cost: R${courseFee}`;
+            } else {
+                courseCostElement.textContent = "";
+            }
         }
 
-        updateCourseCost(courseId);
-    });
+        function calculateTotal() {
+            const totalInput = document.getElementById("total");
+            const discountInfo = document.getElementById("discountInfo");
+            const bankInfo = document.getElementById("bankInfo");
 
-    totalInput.value = "R" + totalFee.toFixed(2);
+            const courseCheckboxes = document.querySelectorAll("input[type='checkbox']");
 
-    // Apply discounts based on the number of selected courses
-    const numSelectedCourses = Object.keys(selectedCourses).length;
-    let discountPercentage = 0;
+            let totalFee = 0;
 
-    if (numSelectedCourses === 2) {
-        discountPercentage = 5;
-    } else if (numSelectedCourses === 3) {
-        discountPercentage = 10;
-    } else if (numSelectedCourses > 3) {
-        discountPercentage = 15;
-    }
+            courseCheckboxes.forEach(checkbox => {
+                const courseId = checkbox.id;
+                if (checkbox.checked) {
+                    selectedCourses[courseId] = true;
+                    totalFee += courseFees[courseId];
+                } else {
+                    delete selectedCourses[courseId];
+                }
 
-    const discountAmount = (totalFee * (discountPercentage / 100)).toFixed(2);
-    totalFee -= discountAmount;
+                updateCourseCost(courseId);
+            });
 
-    // Display discount and bank account information
-    discountInfo.textContent = `Discount: ${discountPercentage}%`;
-    bankInfo.textContent = "Bank Account Info:\nBank: Absa\nAccount Name: Empowering The Nation\nBranch: 000 000\nAccount Number: 0000 0000";
-}
+            totalInput.value = "R" + totalFee.toFixed(2);
 
-// Add event listeners to all course checkboxes
-const courseCheckboxes = document.querySelectorAll("input[type='checkbox']");
-courseCheckboxes.forEach(checkbox => {
-    checkbox.addEventListener("change", calculateTotal);
-});
+            // Apply discounts based on the number of selected courses
+            const numSelectedCourses = Object.keys(selectedCourses).length;
+            let discountPercentage = 0;
 
+            if (numSelectedCourses === 2) {
+                discountPercentage = 5;
+            } else if (numSelectedCourses === 3) {
+                discountPercentage = 10;
+            } else if (numSelectedCourses > 3) {
+                discountPercentage = 15;
+            }
+
+            const discountAmount = (totalFee * (discountPercentage / 100)).toFixed(2);
+            totalFee -= discountAmount;
+
+            // Display discount and bank account information
+            discountInfo.textContent = `Discount: ${discountPercentage}%`;
+            bankInfo.textContent = "Bank Account Info:\nBank: Absa\nAccount Name: Empowering The Nation\nBranch: 000 000\nAccount Number: 0000 0000";
+        }
+
+        // Add event listeners to all course checkboxes
+        const courseCheckboxes = document.querySelectorAll("input[type='checkbox']");
+        courseCheckboxes.forEach(checkbox => {
+            checkbox.addEventListener("change", calculateTotal);
+        });
 
         document.getElementById("checkoutForm").addEventListener("submit", function (event) {
             event.preventDefault();
@@ -204,6 +203,3 @@ courseCheckboxes.forEach(checkbox => {
     </footer>
 </body>
 </html>
-
-REFERENCE LIST
-<!--w3schools. 2023. Forms. [Online] Available at:https://www.w3schools.com/html/html_forms.asp[Acceesed 6 October 2023]-->
