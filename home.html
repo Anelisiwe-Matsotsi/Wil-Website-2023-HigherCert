@@ -7,6 +7,7 @@
     
     <link rel="stylesheet" href="css\style.css"><!--geeksforgeeks, 2023--><!--w3schools,2023-->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <script src="https://code.jquery.com/jquery-1.12.4.min.js"></script>
 
     <style type="text/css">
 
@@ -65,34 +66,21 @@
     display: flex;
     align-items: center;
     justify-content: space-between;
-    padding-right: 70px;
+    padding-right: 0px;
 }
 .col{
     flex-basis: 22%;
     text-align: center;
     color: #555;
-    margin-right: 10px;
+    margin-right: 20px;
     margin-bottom: 20px;
 }
-.counter-box{
-    width: 150px;
-    height: 200px;
-    background: #12192c;
-    padding: 20px 15px;
-    border-radius: 10px;
-    box-shadow: 0 0 20px -4px #66676c;
-    color:#fff;
-}
+
 h2,span{
     display: inline-block;
     margin: 10px 0;
-  
 }
-.counter-box .fa{
-    font-size: 40px;
-    color: rgba(16, 211, 97, 0.603);
-    display: block;
-}
+
 /* Three columns side by side */
 .column2 {
   float: left;
@@ -149,7 +137,40 @@ header
 {
   background-color: aliceblue;
 }
+@import url(https://fonts.googleapis.com/css?family=Lato:400,700|Montserrat:400,700);
+@import url(https://maxcdn.bootstrapcdn.com/font-awesome/4.6.3/css/font-awesome.min.css);
 
+body {
+	background: #40E0D0;
+}
+
+/*/ start count stats /*/
+
+section#counter-stats {
+	display: flex;
+	justify-content: center;
+	margin-top: 10px;
+ margin-left: 140px;
+
+}
+
+.stats {
+  width: 150px;
+    height: 200px;
+    background: #12192c;
+    padding: 20px 15px;
+    border-radius: 10px;
+    box-shadow: 0 0 20px -4px #66676c;
+    color:#fff;
+}
+
+.stats .fa {
+  font-size: 40px;
+    color: rgba(16, 211, 97, 0.603);
+    display: block;
+}
+
+/*/ end count stats /*/
         
         </style>
     </head>
@@ -243,7 +264,7 @@ header
 </div>
 
 <div class="content">
-  <h2 style="align-items: center; font-size: medium; text-align: center;">About: EMPOWERING THE NATION</h2>
+  <h2">ABOUT: EMPOWERING THE NATION</h2>
 <p>Empowering the nation is a business that was established in 2018 in hopes to empower domeatic workers as
      well as gardners all over Johannesburg with skills that can help them improve their wages.People are trained
     on both six-month long Learnerships and six-week long Short Skills Training. </p> <!--IIE,2023-->
@@ -259,56 +280,70 @@ header
 <div class="content">
   <div class="trick">
 <div class="row">
+  <div class="container">
   <div class="column">
     <p> <img src="images\IMG_7270.jpeg" style="width: 500px; height: 300px"></p>
   </div>
   
   <div class="column">
-    <h2>Stats</h2>
-    <div class="row">
-      <div class="col">
+    <h2>STATS</h2>
+  
+      <section id="counter-stats" class="wow fadeInRight" data-wow-duration="1.4s">
+        <div class="row">
+        <div class="col">
           <div class="counter-box">
-              <i class="fa fa-BOOK"></i>
-              <h2 class="counter">215</h2><span>k</span>
-              <h4>PROJECTS</h4>
+            <div class="col-lg-3 stats">
+              <i class="fa fa-book"></i>
+              <h2 class="counter"><div class="counting" data-count="7">0</div></h2>
+              <h4>COURSES</h4>
           </div>
+        </div>
       </div>
       <div class="col">
           <div class="counter-box">
+            <div class="col-lg-3 stats">
               <i class="fa fa-users"></i>
-              <h2 class="counter">101</h2>
-              <h4>HAPPY CLIENTS</h4>
+              <h2 class="counter"><div class="counting" data-count="15183">0</div></h2>
+              <h4>APPLICANTS</h4>
           </div>
+        </div>
       </div>
       <div class="col">
-          <div class="counter-box">
-              <i class="fa fa-USER"></i>
-              <h2 class="counter">205</h2>
-              <h4>TRAINED STUDENTS</h4>
-          </div>
+        <div class="counter-box">
+          <div class="col-lg-3 stats">
+            <i class="fa fa-users"></i>
+            <h2 class="counter"><div class="counting" data-count="12457">0</div></h2>
+            <h4>GRADUATES</h4>
+        </div>
       </div>
-      <div class="col">
-          <div class="counter-box">
-              <i class="fa fa-globe"></i>
-              <h2 class="counter">105</h2>
-              <h4>VISITED COUNTRIES</h4>
-          </div>
+    </div>
+    <div class="col">
+      <div class="counter-box">
+        <div class="col-lg-3 stats">
+          <i class="fa fa-users"></i>
+          <h2 class="counter"><div class="counting" data-count="3">0</div></h2>
+          <h4>LOCATIONS</h4>
       </div>
+    </div>
+  </div>
   </div>
   </div>
 </div>
   </div>
 </div>
+</div>
+</section>
 
+<div class="content">
 <h3>Meet The Founders</h3>
 <div class="row">
   <div class="column2">
     <div class="card">
-      <img src="images\Anelisiwe.jpg" alt="Jane" class="avatar" style="width:100%">
+      <img src="images\Natty.jpg" alt="Jane" class="avatar" style="width:300px;height: 300px;">
       <div class="container">
-        <h2>Anelisiwe Matsotsi</h2>
+        <h2>Natasha Afonso</h2>
         <p class="title">CEO &amp; Founder</p>
-        <p>Some text that describes me lorem ipsum ipsum lorem.</p>
+        <p>Every one deserves a chance to education</p>
         <form action="mailto:ST10328767@vcconnect.edu.com" method="post" enctype="text/plain">
           <p><button class="button">Contact</button></p>
       </div>
@@ -317,11 +352,24 @@ header
 
   <div class="column2">
     <div class="card">
-      <img src="images\Esilhle.jpg" alt="Mike" style="width:400px;height: 300px;">
+      <img src="images\Anelisiwe.jpg" alt="Jane" class="avatar" style="width:300px; height: 300px;">
+      <div class="container">
+        <h2>Anelisiwe Matsotsi</h2>
+        <p class="title">Head of Six Week Courses</p>
+        <p>I work so that you can all suceed</p>
+        <form action="mailto:ST10328767@vcconnect.edu.com" method="post" enctype="text/plain">
+          <p><button class="button">Contact</button></p>
+      </div>
+    </div>
+  </div>
+
+  <div class="column2">
+    <div class="card">
+      <img src="images\Esilhle.jpg" alt="Mike" style="width:300px;height: 300px;">
       <div class="container">
         <h2>Sipho-Esihle Yose</h2>
-        <p class="title">Art Director</p>
-        <p>Some text that describes me lorem ipsum ipsum lorem.</p>
+        <p class="title">Fee Director</p>
+        <p>We try to keep our fees as affordable as we can.</p>
         <form action="mailto:ST10258277@vcconnect.edu.com" method="post" enctype="text/plain">
           <p><button class="button">Contact</button></p>
       </div>
@@ -330,11 +378,11 @@ header
 
   <div class="column2">
     <div class="card">
-      <img src="images\shamgar dogg.jpg" alt="John" style="width:400px; height: 300px;">
+      <img src="images\shamgar dogg.jpg" alt="John" style="width:300px; height: 300px;">
       <div class="container">
         <h2>Shamgar Vambe</h2>
-        <p class="title">Designer</p>
-        <p>Some text that describes me lorem ipsum ipsum lorem.</p>
+        <p class="title">Director of location</p>
+        <p>Choose what is best for you</p>
         <form action="mailto:ST10307648@vcconnect.edu.com" method="post" enctype="text/plain">
         <p><button class="button">Contact</button></p>
         
@@ -345,16 +393,17 @@ header
 
   <div class="column2">
     <div class="card">
-      <img src="images\siya.png" alt="Mike" style="width:400px; height: 300px;">
+      <img src="images\Siyakholwa.jpg" alt="Mike" style="width:300px; height: 300px;">
       <div class="container">
         <h2>Siyakholwa  Bonga</h2>
-        <p class="title">Art Director</p>
-        <p>Some text that describes me lorem ipsum ipsum lorem.</p>
+        <p class="title">Head of Six Month Courses</p>
+        <p>In the end you will prosper</p>
         <form action="mailto:ST10307648@vcconnect.edu.com" method="post" enctype="text/plain">
           <p><button class="button">Contact</button></p>
       </div>
     </div>
   </div>
+</div>
 
 </div>
 
@@ -362,7 +411,6 @@ header
 
 
 <!--Testimonials-->
-
 
 
 
@@ -380,6 +428,35 @@ header
     slides[slideIndex-1].style.display = "block";
     setTimeout(showSlides, 5000); // Change image every 2 seconds
   }
+
+  // number count for stats, using jQuery animate
+
+$('.counting').each(function() {
+  var $this = $(this),
+      countTo = $this.attr('data-count');
+  
+  $({ countNum: $this.text()}).animate({
+    countNum: countTo
+  },
+
+  {
+
+    duration: 3000,
+    easing:'linear',
+    step: function() {
+      $this.text(Math.floor(this.countNum));
+    },
+    complete: function() {
+      $this.text(this.countNum);
+      //alert('finished');
+    }
+
+  });  
+  
+
+});
+
+
   </script>
 
     <footer>
