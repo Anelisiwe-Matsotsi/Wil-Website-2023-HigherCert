@@ -240,7 +240,7 @@ body {
 
 /* Trick Styles */
 .trick {
-  background-color: rgb(43, 160, 61);
+  background-color:#80c68b;
   padding: 2px 0 2px 10px;
   border-bottom-left-radius: 40px;
   border-top-left-radius: 40px;
