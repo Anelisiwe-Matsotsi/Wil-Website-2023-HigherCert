@@ -17,7 +17,7 @@
 .navbar {
   overflow: hidden;
   background-color: #f4c313;
-  font-family: Impact, Haettenschweiler, 'Arial', sans-serif;
+  font-family: Cambria, Cochin, Georgia, Times, "Times New Roman", serif;
 }
 
 /* Navigation links */
@@ -300,12 +300,52 @@ div.gallery img {
   
 }/*(W3schools, 2023).*/
 
+input[type=text] {
+  width: 100%;
+  padding: 12px 20px;
+  margin: 8px 0;
+  box-sizing: border-box;
+  border: none;
+  background-color: #3CBC8D;
+  color: rgb(255, 253, 253);}
+  input[type=text] {
+    width: 180px;
+    box-sizing: border-box;
+    border: 2px solid #050101;
+    border-radius: 4px;
+    font-size: 16px;
+    background-color: #80c68b;
+    background-image: url('searchicon.png');
+    background-position: 10px 10px; 
+    background-repeat: no-repeat;
+    padding: 12px 20px 12px 40px;
+    transition: width 0.4s ease-in-out;
+  }/*(W3schools, 2023).*/
+  
+  input[type=text]:focus {
+    width: 100%;
+  }/*(W3schools, 2023).*/
+  input[type=button], input[type=submit], input[type=reset] {
+    background-color: #04AA6D;
+    border: none;
+    color: white;
+    padding: 16px 32px;
+    text-decoration: none;
+    margin: 4px 2px;
+    cursor: pointer;
+  }/*(W3schools, 2023).*/
+
+
 
 /* Responsive Styles for Small Screens */
 @media screen and (max-width: 768px) {
   .h1 {
     width: 90%;
     margin: 0 auto;
+  }
+  .column {
+    float: left;
+    width:10%;
   }
 
   body {
