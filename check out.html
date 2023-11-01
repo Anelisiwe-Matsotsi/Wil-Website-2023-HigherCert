@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>NICE ICE - Course Checkout</title>
+    <title>EMPOWERING THE NATION</title>
     <link rel="stylesheet" href="css/style.css">
     <style type="text/css">
         /* Your additional CSS styles here */
@@ -49,12 +49,13 @@
 
         <h1 class="h1">Course Checkout</h1>
 
-        <form id="checkoutForm">
-            <label for="firstName">Name:</label>
-            <input type="text" id="firstName" required><br><br>
+         <form name="contact" id="contact" action="mailto:email@domain.com" method="post" enctype="text/plain" onsubmit="valEmail()">
+            
+          
+          <input type="text" id="name" name="name" placeholder="NAME..." required><br><br>
 
-            <label for="lastName">Surname:</label>
-            <input type="text" id="lastName" required><br><br>
+        
+          <input type="text" id="surnname" name="surname" placeholder="SURNAME..." required><br><br>
 
             <label for="educationLevel">Highest Education Level:</label>
             <select id="educationLevel" required>
@@ -64,22 +65,22 @@
                 <option value="master">Master's Degree</option>
                 <option value="phd">Ph.D.</option>
             </select><br><br>
-        </div>
+        
 
         <div class="content">
             <div class="trick">
                 <h2>Choose your course/s</h2>
             <h3>6 Month Courses</h3>
             <label class="container">
-                <input type="checkbox" id="firstAid"> First Aid (R1500)
+                <input type="checkbox" id="firstAid" name="First Aid Fee" > First Aid (R1500)
                 <div id="firstAidCost" class="course-cost">Cost: R1500</div>
             </label><br>
             <label class="container">
-                <input type="checkbox" id="sewing"> Sewing (R1500)
+                <input type="checkbox" id="sewing"  name="Sewing Fee"> Sewing (R1500)
                 <div id="sewingCost" class="course-cost">Cost: R1500</div>
             </label><br>
             <label class="container">
-                <input type="checkbox" id="landscaping"> Landscaping (R1500)
+                <input type="checkbox" id="landscaping"  name="Land Scaping Fee"> Landscaping (R1500)
                 <div id="landscapingCost" class="course-cost">Cost: R1500</div>
             </label><br>
             <label class="container">
@@ -89,33 +90,33 @@
 
             <h3>6 Week Courses</h3>
             <label class="container">
-                <input type="checkbox" id="childMinding"> Child Minding (R750)
+                <input type="checkbox" id="childMinding"  name="Child Minding Fee"> Child Minding (R750)
                 <div id="childMindingCost" class="course-cost">Cost: R750</div>
             </label><br>
             <label class="container">
-                <input type="checkbox" id="cooking"> Cooking (R750)
+                <input type="checkbox" id="cooking"  name="Cooking Fee"> Cooking (R750)
                 <div id="cookingCost" class="course-cost">Cost: R750</div>
             </label><br>
             <label class="container">
-                <input type="checkbox" id="gardenMaintenance"> Garden Maintenance (R750)
+                <input type="checkbox" id="gardenMaintenance"  name="Gardening Fee"> Garden Maintenance (R750)
                 <div id="gardenMaintenanceCost" class="course-cost">Cost: R750</div>
             </label><br>
 
             <label for="total">Total Fee:</label>
-            <input type="text" id="total" readonly><br><br>
+            <input type="text" id="total" readonly  name="Final Fee"><br><br>
 
             <p id="discountInfo"></p>
             <p id="bankInfo"></p>
 
             <button type="button" onclick="calculateTotal()">Calculate Total</button>
-            <button type="submit">Submit</button>
+            <input type="submit" value="Submit">
             <br>
             <br>
         </form>
       
     </div><br>
         </div>
-    <a href="six week courses.html"><button class="button-89" role="button">BACK</button></a><a href="contact us.html"><button class="button-89" role="button">NEXT</button></a>
+  
 
      <!--Linkedin, 2023-->
      <!--the code below is the calculations of the coursesFees-->
@@ -200,18 +201,16 @@
     </script>
 </div>
 </div>
-    <footer>
-        <script>
-            var theDate = new Date()
-            document.write(theDate.getFullYear())
-            var theDate = new Date()
-            document.write("&copy;" + theDate.getFullYear())
-            document.write(" - Empowering Minds | Last modified: ")
-            var theModifiedDate = new Date(document.lastModified)
-            document.write(theModifiedDate.toDateString())
-        </script>
-        <br>Powered by "sharp-sharp" Web Hosting
-    </footer>
+<footer>
+    <script>
+        var theDate = new Date()
+        document.write("&copy;" + theDate.getFullYear())
+        document.write(" - Empowering Minds | Last modified: ")
+        var theModifiedDate = new Date(document.lastModified)
+        document.write(theModifiedDate.toDateString())
+    </script>
+    <br>Powered by DUSK Web Hosting
+  </footer>
 </body>
 </html>
 
