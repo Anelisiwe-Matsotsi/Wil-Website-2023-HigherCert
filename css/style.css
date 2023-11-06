@@ -1,7 +1,7 @@
  /* Header Styles */
 .h1 {
-  border: 20px solid #97e4e9;
-  background-color: white;
+  border: 20px solid #157581;
+
   text-align: center;
   width: 100%;
   margin: 0 auto;
@@ -17,7 +17,7 @@
 /* The navigation menu */
 .navbar {
   overflow: hidden;
-  background-color: #f4c313;
+  background-color:#c2c0bc;
   font-family: Cambria, Cochin, Georgia, Times, "Times New Roman", serif;
 }
 
@@ -91,7 +91,7 @@
 /* Body Styles */
 body {
   font-family: Cambria, Cochin, Georgia, Times, "Times New Roman", serif;
-  background: #97e4e9;
+  background: #157581;
   text-align: center;
   font-size: medium;
 }
@@ -123,8 +123,8 @@ body {
 
 /* Content Styles */
 .content {
-  border: 30px solid #97e4e9;
-  background-color:#f3d89d;
+  border: 30px solid#157581;
+  background-color: #f3d89d;
   font-size: medium;
   padding: 10px;
 }
@@ -241,7 +241,7 @@ body {
 
 /* Trick Styles */
 .trick {
-  background-color:#80c68b;
+  background-color:#1e702b;
   padding: 2px 0 2px 10px;
   border-bottom-left-radius: 40px;
   border-top-left-radius: 40px;
@@ -324,7 +324,7 @@ input[type=text] {
   }/*(W3schools, 2023).*/
   
   input[type=text]:focus {
-    width: 100%;
+    width: 20%;
   }/*(W3schools, 2023).*/
   input[type=button], input[type=submit], input[type=reset] {
     background-color: #04AA6D;
@@ -401,6 +401,7 @@ input[type=text] {
     padding: 7px;
     text-align: center;
   }/*(W3schools, 2023).*/
+  
 }
 /*Reference list
 W3schools- [Online]. Available at:
