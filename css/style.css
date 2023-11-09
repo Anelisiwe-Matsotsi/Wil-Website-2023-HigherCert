@@ -128,6 +128,14 @@ body {
   font-size: medium;
   padding: 10px;
 }
+.content1 {
+  border: 30px solid#157581;
+  background-color: #f3d89d;
+  font-size: medium;
+  padding-bottom: 75px;
+  padding-top: 0px;
+}
+
 
 
 * {box-sizing:border-box}

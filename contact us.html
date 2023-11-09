@@ -1,93 +1,278 @@
 <!DOCTYPE html>
 <html>
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>EMPOWERING THE NATION</title>
-    <link rel="stylesheet" href="css/style.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="css/style.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"
+    />
     <style type="text/css">
-        /* Your custom CSS styles can go here */
-    </style>
-</head>
-<body>
+      ul {
+        position: absolute;
+        top: 71%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        margin: 0;
+        padding: 0;
+        display: flex;
+      }
+      ul li {
+        list-style: none;
+      }
+      ul li a {
+        display: block;
+
+        width: 50px;
+        height: 50px;
+        line-height: 50px;
+        font-size: 40px;
+        text-align: center;
+        text-decoration: none;
+        color: #404040;
+        margin: 0 30px;
+        transition: 0.5s;
+      }
+      ul li a span {
+        position: absolute;
+        transition: transform 0.5s;
+      }
+      ul li a span:nth-child(1),
+      ul li a span:nth-child(3) {
+        width: 100%;
+        height: 3px;
+        background: #404040;
+      }
+      ul li a span:nth-child(1) {
+        top: 0;
+        left: 0;
+        transform-origin: right;
+      }
+      ul li a:hover span:nth-child(1) {
+        transform: scaleX(0);
+        transform-origin: left;
+        transition: transform 0.5s;
+      }
+
+      ul li a span:nth-child(3) {
+        bottom: 0;
+        left: 0;
+        transform-origin: left;
+      }
+      ul li a:hover span:nth-child(3) {
+        transform: scaleX(0);
+        transform-origin: right;
+        transition: transform 0.5s;
+      }
+
+      ul li a span:nth-child(2),
+      ul li a span:nth-child(4) {
+        width: 3px;
+        height: 100%;
+        background: #404040;
+      }
+      ul li a span:nth-child(2) {
+        top: 0;
+        left: 0;
+        transform: scale(0);
+        transform-origin: bottom;
+      }
+      ul li a:hover span:nth-child(2) {
+        transform: scale(1);
+        transform-origin: top;
+        transition: transform 0.5s;
+      }
+      ul li a span:nth-child(4) {
+        top: 0;
+        right: 0;
+        transform: scale(0);
+        transform-origin: top;
+      }
+      ul li a:hover span:nth-child(4) {
+        transform: scale(1);
+        transform-origin: bottom;
+        transition: transform 0.5s;
+      }
+
+      .facebook:hover {
+        color: #3b5998;
+      }
+      .facebook:hover span {
+        background: #3b5998;
+      }
+      .twitter:hover {
+        color: #1da1f2;
+      }
+      .twitter:hover span {
+        background: #1da1f2;
+      }
+      .instagram:hover {
+        color: #c32aa3;
+      }
+      .instagram:hover span {
+        background: #c32aa3;
+      }
+      .google:hover {
+        color: #dd4b39;
+      }
+      .google:hover span {
+        background: #dd4b39;
+      }
+      ul li a .twitter {
+        color: #1da1f2;
+      }
+      ul li a:hover:nth-child(3) {
+        color: #c32aa3;
+      }
+      ul li a:hover:nth-child(4) {
+        color: #dd4b39;
+      }         
+    </style> <!--2023codepen.io/Stockin 2023-->
+  </head>
+  <body>
     <div class="background">
-        <div class="header">
-            <div class="logo">
-                <a href="images/thumbnail_IMG_7280.jpg">
-                    <img src="images/thumbnail_IMG_7280.jpg" alt="Empowering Logo" height="200" width="200">
-                </a>
-            </div>
+      <div class="header">
+        <div class="logo">
+          <a href="images/thumbnail_IMG_7280.jpg">
+            <img
+              src="images/thumbnail_IMG_7280.jpg"
+              alt="Empowering Logo"
+              height="200"
+              width="200"
+            />
+          </a>
         </div>
-        
-        <!-- Navigation Menu -->
-        <div class="navbar">
-            <a href="home.html">Home</a>
-            <div class="subnav">
-                <button class="subnavbtn">Six Week Course <i class="fa fa-caret-down"></i></button>
-                <div class="subnav-content">
-                    <a href="six week courses.html">Summary Of Six Week Courses</a>
-                    <a href="Child Minding.html">Child Minding</a>
-                    <a href="Cooking.html">Cooking</a>
-                    <a href="Garden Maintenance.html">Garden Maintenance</a>
-                </div>
-            </div>
-            <div class="subnav">
-                <button class="subnavbtn">Six Month Course <i class="fa fa-caret-down"></i></button>
-                <div class="subnav-content">
-                    <a href="six month courses.html">Summary Of Six Month Courses</a>
-                    <a href="First Aid.html">First Aid</a>
-                    <a href="Sewing.html">Sewing</a>
-                    <a href="Landscaping.html">Landscaping</a>
-                    <a href="Lifeskills.html">Life Skills</a>
-                </div>
-            </div>
-            <a href="check out.html">Check out</a>
-            <a href="contact us.html">Contact</a>
+      </div>
+
+      <!-- Navigation Menu -->
+      <div class="navbar">
+        <a href="home.html">Home</a>
+        <div class="subnav">
+          <button class="subnavbtn">
+            Six Week Course <i class="fa fa-caret-down"></i>
+          </button>
+          <div class="subnav-content">
+            <a href="six week courses.html">Summary Of Six Week Courses</a>
+            <a href="Child Minding.html">Child Minding</a>
+            <a href="Cooking.html">Cooking</a>
+            <a href="Garden Maintenance.html">Garden Maintenance</a>
+          </div>
         </div>
-
-        <h1 >Contact Us</h1>
-        <div class="content">
-            <h2>EMPOWERING THE NATION</h2>
-            <p>&#128222;</p>
-            <p>Phone: <a href="tel:+27748873445">+27 748873445</a></p>
-
-            <p>Email: <a href="mailto:info@empoweringthenation.com">info@empoweringthenation.com</a></p>
-            <p><strong>Business Hours:</strong> Mon-Fri, 9:00 AM - 5:00 PM</p>
+        <div class="subnav">
+          <button class="subnavbtn">
+            Six Month Course <i class="fa fa-caret-down"></i>
+          </button>
+          <div class="subnav-content">
+            <a href="six month courses.html">Summary Of Six Month Courses</a>
+            <a href="First Aid.html">First Aid</a>
+            <a href="Sewing.html">Sewing</a>
+            <a href="Landscaping.html">Landscaping</a>
+            <a href="Lifeskills.html">Life Skills</a>
+          </div>
         </div>
+        <a href="check out.html">Check out</a>
+        <a href="contact us.html">Contact</a>
+      </div>
 
+      <h1>Contact Us</h1>
+      <div class="content1">
+        <h2>EMPOWERING THE NATION</h2>
+        <p>&#128222;</p>
+        <p>Phone: <a href="tel:+27748873445">+27 748873445</a></p>
+
+        <p>
+          Email:
+          <a href="mailto:info@empoweringthenation.com"
+            >info@empoweringthenation.com</a
+          >
+        </p>
+        <h3><p><strong>Business Hours:</strong> Mon-Fri, 9:00 AM - 5:00 PM</p></h3>
         <h2>SOCIAL MEDIA</h2>
-        <div class="ref">
-            <a href="https://m.Instagram.com" target="_blank">Follow us on Instagram</a>
-            <a href="https://m.Instagram.com" class="fa fa-instagram" target="_blank"></a><br>
-            <a href="https://m.Facebook.com" target="_blank">Follow us on Facebook</a>
-            <a href="https://m.Facebook.com" class="fa fa-facebook" target="_blank"></a><br>
-            <a href="https://m.Twitter.com" target="_blank">Follow us on Twitter</a>
-            <a href="https://m.Twitter.com" class="fa fa-twitter" target="_blank"></a>
+        <ul>
+          <li>
+            <a class="facebook" href="https://m.Facebook.com" target="_blank">
+              <span></span>
+              <span></span>
+              <span></span>
+              <span></span>
+              <i class="fa fa-facebook" aria-hidden="true"></i>
+            </a>
+          </li>
+          <li>
+            <a class="twitter" href="https://m.Twitter.com" target="_blank">
+              <span></span>
+              <span></span>
+              <span></span>
+              <span></span>
+              <i class="fa fa-twitter" aria-hidden="true"></i>
+            </a>
+          </li>
+          <li>
+            <a class="instagram" href="https://m.Instagram.com" target="_blank">
+              <span></span>
+              <span></span>
+              <span></span>
+              <span></span>
+              <i class="fa fa-instagram" aria-hidden="true"></i>
+            </a>
+          </li>
+          <li></li>
+        </ul>
+      </div>
+
+      <div class="content">
+        <div class="trick">
+          <iframe
+            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d192730.6927028647!2d28.074884932972004!3d-26.157660472162057!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x1e95733c18d3cb89%3A0xed59860bb3c2c891!2sThe%20IIE&#39;s%20Varsity%20College%20-%20Sandton!5e0!3m2!1sen!2sza!4v1697550553000!5m2!1sen!2sza"
+            width="350"
+            height="350"
+            style="border: 1"
+            allowfullscreen=""
+            loading="lazy"
+            referrerpolicy="no-referrer-when-downgrade"
+            align="left"
+          >
+            <p>Address: Venue 1, IIE VARSITY COLLEGE</p>
+          </iframe>
+          <iframe
+            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3580.157815253938!2d28.035201876137492!3d-26.191544077084416!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x1ef6fe446b7c5555%3A0x2782ffab3d36fb68!2sCity%20Varsity%20-%20Braamfontein!5e0!3m2!1sen!2sza!4v1697550878716!5m2!1sen!2sza"
+            width="350"
+            height="350"
+            style="border: 1"
+            allowfullscreen=""
+            loading="lazy"
+            referrerpolicy="no-referrer-when-downgrade"
+            align="middle"
+          >
+            <p>Address: Venue 2, City Varsity Braamfontein</p>
+          </iframe>
+          <iframe
+            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3580.1010792083707!2d28.032655076137573!3d-26.193389977083235!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x1e950c1bc398959d%3A0x57824381e0ee151d!2sVarsity%20Institute%20of%20Science%20and%20Technology%20(Pty)%20LTD!5e0!3m2!1sen!2sza!4v1697550952667!5m2!1sen!2sza"
+            width="350"
+            height="350"
+            style="border: 1"
+            allowfullscreen=""
+            loading="lazy"
+            referrerpolicy="no-referrer-when-downgrade"
+            align="right"
+          >
+            <p>Address: Venue 3, Varsity Institute of Science and Technology</p>
+          </iframe>
         </div>
-        <div class="content">
-            <div class="trick">
-                <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d192730.6927028647!2d28.074884932972004!3d-26.157660472162057!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x1e95733c18d3cb89%3A0xed59860bb3c2c891!2sThe%20IIE&#39;s%20Varsity%20College%20-%20Sandton!5e0!3m2!1sen!2sza!4v1697550553000!5m2!1sen!2sza" width="350" height="350" style="border:1;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade" align="left">
-                    <p>Address: Venue 1, IIE VARSITY COLLEGE</p>
-                </iframe>
-                <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3580.157815253938!2d28.035201876137492!3d-26.191544077084416!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x1ef6fe446b7c5555%3A0x2782ffab3d36fb68!2sCity%20Varsity%20-%20Braamfontein!5e0!3m2!1sen!2sza!4v1697550878716!5m2!1sen!2sza" width="350" height="350" style="border:1;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade" align="middle">
-                    <p>Address: Venue 2, City Varsity Braamfontein</p>
-                </iframe>
-                <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3580.1010792083707!2d28.032655076137573!3d-26.193389977083235!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x1e950c1bc398959d%3A0x57824381e0ee151d!2sVarsity%20Institute%20of%20Science%20and%20Technology%20(Pty)%20LTD!5e0!3m2!1sen!2sza!4v1697550952667!5m2!1sen!2sza" width="350" height="350" style="border:1;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade" align="right">
-                    <p>Address: Venue 3, Varsity Institute of Science and Technology</p>
-                </iframe>
-            </div>
-        </div>
+      </div>
     </div>
     <footer>
-        <script>
-            var theDate = new Date()
-            document.write("&copy;" + theDate.getFullYear())
-            document.write(" - Empowering Minds | Last modified: ")
-            var theModifiedDate = new Date(document.lastModified)
-            document.write(theModifiedDate.toDateString())
-        </script>
-        <br>Powered by DUSK Web Hosting
+      <script>
+        var theDate = new Date();
+        document.write("&copy;" + theDate.getFullYear());
+        document.write(" - Empowering Minds | Last modified: ");
+        var theModifiedDate = new Date(document.lastModified);
+        document.write(theModifiedDate.toDateString());
+      </script>
+      <br />Powered by DUSK Web Hosting
     </footer>
-</body>
+  </body>
 </html>
+<!--codepen.io/Stockin 2023. [Online] Available at:https://codepen.io/Stockin/pen/bzdNOq [Acceesed 9 Nov 2023]-->
