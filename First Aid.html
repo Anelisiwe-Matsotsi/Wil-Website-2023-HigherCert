@@ -41,6 +41,26 @@
         padding: 20px;
         text-align: center;
     }
+    .book-now-button {
+    padding: 10px 20px; /* Button padding */
+    text-align: center; /* Center-align text */
+    font-size: 16px; /* Button font size */
+    margin: 10px 0; /* Add some margin for spacing */
+    cursor: pointer; /* Change cursor to pointer on hover */
+    --b: 3px; /* border thickness */
+  --s: 0.45em; /* size of the corner */
+  --color: #373b44;
+
+  padding: calc(0.5em + var(--s)) calc(0.9em + var(--s));
+  color: var(--color);
+  --_p: var(--s);
+  background: conic-gradient(
+      from 90deg at var(--b) var(--b),
+      #0000 90deg,
+      var(--color) 0
+    )
+
+  }
  
         
         </style>
@@ -100,13 +120,19 @@
             of First-Aid skills. However, if a certain student is not yet competant then they shall only receive an attendance certificate and not the 
             actual qualification.
         </p>
+        <h3>Fees:</h3>
+        <p style="font-size: 20px;">R1 500</p> 
+        <a href="check out.html"><button class="book-now-button" role="button">Book Now</button></a>
+        <br>
+        <br>
         <img src="images\IMG_7279.jpeg" alt="Kit" style="border-radius: 50%; width: 300px;"title="First Aid kit"> <!--w3schools, 2023-->
         <img src="images\IMG_7269.jpeg" alt="bandage" style="border-radius: 50%; width: 300px;"title="Bandaging a girl">
         <img src="images\IMG_7278.jpeg" alt="Cast" style="border-radius: 50%; width: 300px;"title="Bandaged hand">
+        
       </div>
-
+  
         </div>
-        <a href="six month courses.html"><button class="button-89" role="button">BACK</button></a><a href="check out.html"><button class="button-89" role="button">BOOK NOW</button></a>
+        <a href="six month courses.html"><button class="button-89" role="button">Six month courses</button></a><a href="Sewing.html"><button class="button-89" role="button">Sewing</button></a>
     </body>
 
 

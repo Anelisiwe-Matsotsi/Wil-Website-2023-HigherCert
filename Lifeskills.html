@@ -10,7 +10,26 @@
  /*(IIE, 2012) */ 
 
  
-        
+ .book-now-button {
+    padding: 10px 20px; /* Button padding */
+    text-align: center; /* Center-align text */
+    font-size: 16px; /* Button font size */
+    margin: 10px 0; /* Add some margin for spacing */
+    cursor: pointer; /* Change cursor to pointer on hover */
+    --b: 3px; /* border thickness */
+  --s: 0.45em; /* size of the corner */
+  --color: #373b44;
+
+  padding: calc(0.5em + var(--s)) calc(0.9em + var(--s));
+  color: var(--color);
+  --_p: var(--s);
+  background: conic-gradient(
+      from 90deg at var(--b) var(--b),
+      #0000 90deg,
+      var(--color) 0
+    )
+
+  }
         </style>
     </head>
     <body>
@@ -71,21 +90,25 @@
     relevant topic. The duration of this course is six months at the cost of a once of payment of R1500. However,
     should you need a payment arrangement you will visit the financial office.
 </p>
-<img src="images\IMG_7273.jpeg"alt="cutting leaves" style="border-radius: 50%; width: 300px;"title="Land scapping logo" > <!--w3schools, 2023-->
-<img src="images\IMG_7275.jpeg" alt="cutting leaves" style="border-radius: 50%; width: 300px;"title="UBUNTU">
+<h3>Fees:</h3>
+<p style="font-size: 20px;">R1 500</p> 
+<a href="check out.html"><button class="book-now-button" role="button">Book Now</button></a>
+<br>
+<br>
+<img src="images\IMG_7273.jpeg"alt="cutting leaves" style="border-radius: 50%; width: 300px;height: 250px;"title="Land scapping logo" > <!--w3schools, 2023-->
+<img src="images\IMG_7275.jpeg" alt="cutting leaves" style="border-radius: 50%; width: 300px;height: 250px;"title="UBUNTU">
 </div>
         </div>
-        <a href="six month courses.html"><button class="button-89" role="button">BACK</button></a><a href="check out.html"><button class="button-89" role="button">BOOK NOW</button></a>
-    </body>
-<footer>
-  <script>
-      var theDate = new Date()
-      document.write("&copy;" + theDate.getFullYear())
-      document.write(" - Empowering Minds | Last modified: ")
-      var theModifiedDate = new Date(document.lastModified)
-      document.write(theModifiedDate.toDateString())
-  </script>
-  <br>Powered by DUSK Web Hosting
-</footer>
-        
-</html>
+        <a href="Landscaping.html"><button class="button-89" role="button">Landscaping</button>
+        </body>
+        <footer>
+          <script>
+              var theDate = new Date()
+              document.write("&copy;" + theDate.getFullYear())
+              document.write(" - Empowering Minds | Last modified: ")
+              var theModifiedDate = new Date(document.lastModified)
+              document.write(theModifiedDate.toDateString())
+          </script>
+          <br>Powered by DUSK Web Hosting
+        </footer>
+        </html>
