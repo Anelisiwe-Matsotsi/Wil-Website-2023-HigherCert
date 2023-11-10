@@ -51,11 +51,12 @@
 
          <form name="contact" id="contact" action="mailto:email@domain.com" method="post" enctype="text/plain" onsubmit="valEmail()">
             
-          
           <input type="text" id="name" name="name" placeholder="NAME..." required><br><br>
 
         
           <input type="text" id="surnname" name="surname" placeholder="SURNAME..." required><br><br>
+          
+          <input type="text" id="email" name="email" placeholder="EMAIL..." required><br><br>
 
             <label for="educationLevel">Highest Education Level:</label>
             <select id="educationLevel" required>
@@ -108,7 +109,7 @@
             <p id="discountInfo"></p>
             <p id="bankInfo"></p>
 
-            <button type="button" onclick="calculateTotal()">Calculate Total</button>
+ 
             <input type="submit" value="Submit">
             <br>
             <br>
@@ -143,6 +144,7 @@
                 courseCostElement.textContent = "";
             }
         }
+        
 
         function calculateTotal() {
             const totalInput = document.getElementById("total");
@@ -165,7 +167,6 @@
                 updateCourseCost(courseId);
             });
 
-            totalInput.value = "R" + totalFee.toFixed(2);
 
             // Apply discounts based on the number of selected courses
             const numSelectedCourses = Object.keys(selectedCourses).length;
@@ -182,8 +183,9 @@
             const discountAmount = (totalFee * (discountPercentage / 100)).toFixed(2);
             totalFee -= discountAmount;
 
+            totalInput.value = "R" + totalFee.toFixed(2);
             // Display discount and bank account information
-            discountInfo.textContent = `Discount: ${discountPercentage}%`;
+            discountInfo.textContent = `Discount Applied: ${discountPercentage}%`;
             bankInfo.textContent = "Bank Account Info:\nBank: Absa\nAccount Name: Empowering The Nation\nBranch: 000 000\nAccount Number: 0000 0000";
         }
 
