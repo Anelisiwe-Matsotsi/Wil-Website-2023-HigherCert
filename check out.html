@@ -7,6 +7,28 @@
     <link rel="stylesheet" href="css/style.css">
     <style type="text/css">
         /* Your additional CSS styles here */
+        select {
+            width: 100%;
+            padding: 12px 20px;
+            margin: 8px 0;
+            box-sizing: border-box;
+            border: none;
+            background-color: #3CBC8D;
+            color: black;
+        }
+        select{
+            width: 180px;
+            box-sizing: border-box;
+            border: 2px solid #050101;
+            border-radius: 4px;
+            font-size: 16px;
+            background-color: #80c68b;
+            background-image: url('searchicon.png');
+            background-position: 10px 10px; 
+            background-repeat: no-repeat;
+            padding: 12px 20px 12px 40px;
+            transition: width 0.4s ease-in-out;
+        }
     </style>
 </head>
 <body>
@@ -51,65 +73,67 @@
 
          <form name="contact" id="contact" action="mailto:email@domain.com" method="post" enctype="text/plain" onsubmit="valEmail()">
             
-          
           <input type="text" id="name" name="name" placeholder="NAME..." required><br><br>
 
         
           <input type="text" id="surnname" name="surname" placeholder="SURNAME..." required><br><br>
+          
+          <input type="text" id="email" name="email" placeholder="EMAIL..." required><br><br>
 
-            <label for="educationLevel">Highest Education Level:</label>
+            <label for="educationLevel" style="font-size: 24px;">Highest Education Level:</label>
+            <br>
             <select id="educationLevel" required>
-                <option value="none">Select</option>
-                <option value="highSchool">High School</option>
-                <option value="bachelor">Bachelor's Degree</option>
-                <option value="master">Master's Degree</option>
-                <option value="phd">Ph.D.</option>
+                <option value="none"style="font-size: 20px;">Select</option>
+                <option value="highSchool"style="font-size: 20px;">High School</option>
+                <option value="bachelor"style="font-size: 20px;">Bachelor's Degree</option>
+                <option value="master"style="font-size: 20px;">Master's Degree</option>
+                <option value="phd"style="font-size: 20px;">Ph.D.</option>
             </select><br><br>
         
 
         <div class="content">
-            <div class="trick">
-                <h2>Choose your course/s</h2>
-            <h3>6 Month Courses</h3>
-            <label class="container">
-                <input type="checkbox" id="firstAid" name="First Aid Fee" > First Aid (R1500)
+         
+                <h2 style="font-size: 24px;">Choose your course/s</h2>
+            <h3 style="font-size: 22px;">6 Month Courses</h3>
+            <label class="container"style="font-size: 20px;">
+                <input type="checkbox" id="firstAid" name="First Aid Fee" > First Aid 
                 <div id="firstAidCost" class="course-cost">Cost: R1500</div>
             </label><br>
-            <label class="container">
-                <input type="checkbox" id="sewing"  name="Sewing Fee"> Sewing (R1500)
+            <label class="container"style="font-size: 20px;">
+                <input type="checkbox" id="sewing"  name="Sewing Fee"> Sewing 
                 <div id="sewingCost" class="course-cost">Cost: R1500</div>
             </label><br>
-            <label class="container">
-                <input type="checkbox" id="landscaping"  name="Land Scaping Fee"> Landscaping (R1500)
+            <label class="container"style="font-size: 20px;">
+                <input type="checkbox" id="landscaping"  name="Land Scaping Fee"> Landscaping
                 <div id="landscapingCost" class="course-cost">Cost: R1500</div>
             </label><br>
-            <label class="container">
-                <input type="checkbox" id="lifeSkills"> Life Skills (R1500)
+            <label class="container"style="font-size: 20px;">
+                <input type="checkbox" id="lifeSkills"> Life Skills 
                 <div id="lifeSkillsCost" class="course-cost">Cost: R1500</div>
             </label><br>
 
-            <h3>6 Week Courses</h3>
-            <label class="container">
-                <input type="checkbox" id="childMinding"  name="Child Minding Fee"> Child Minding (R750)
+            <h3 style="font-size: 22px;">6 Week Courses</h3>
+            <label class="container"style="font-size: 20px;">
+                <input type="checkbox" id="childMinding"  name="Child Minding Fee"> Child Minding
                 <div id="childMindingCost" class="course-cost">Cost: R750</div>
             </label><br>
-            <label class="container">
-                <input type="checkbox" id="cooking"  name="Cooking Fee"> Cooking (R750)
+            <label class="container"style="font-size: 20px;">
+                <input type="checkbox" id="cooking"  name="Cooking Fee"> Cooking
                 <div id="cookingCost" class="course-cost">Cost: R750</div>
             </label><br>
-            <label class="container">
-                <input type="checkbox" id="gardenMaintenance"  name="Gardening Fee"> Garden Maintenance (R750)
+            <label class="container"style="font-size: 20px;">
+                <input type="checkbox" id="gardenMaintenance"  name="Gardening Fee"> Garden Maintenance
                 <div id="gardenMaintenanceCost" class="course-cost">Cost: R750</div>
             </label><br>
 
-            <label for="total">Total Fee:</label>
+            <label for="total"style="font-size: 20px;">Total Fee:</label>
             <input type="text" id="total" readonly  name="Final Fee"><br><br>
 
             <p id="discountInfo"></p>
             <p id="bankInfo"></p>
 
-            <button type="button" onclick="calculateTotal()">Calculate Total</button>
-            <input type="submit" value="Submit">
+ 
+            <input type="submit" value="Submit" style="font-size: 20px;">
             <br>
             <br>
         </form>
@@ -143,6 +167,7 @@
                 courseCostElement.textContent = "";
             }
         }
+        
 
         function calculateTotal() {
             const totalInput = document.getElementById("total");
@@ -165,7 +190,6 @@
                 updateCourseCost(courseId);
             });
 
-            totalInput.value = "R" + totalFee.toFixed(2);
 
             // Apply discounts based on the number of selected courses
             const numSelectedCourses = Object.keys(selectedCourses).length;
@@ -182,8 +206,9 @@
             const discountAmount = (totalFee * (discountPercentage / 100)).toFixed(2);
             totalFee -= discountAmount;
 
+            totalInput.value = "R" + totalFee.toFixed(2);
             // Display discount and bank account information
-            discountInfo.textContent = `Discount: ${discountPercentage}%`;
+            discountInfo.textContent = `Discount Applied: ${discountPercentage}%`;
             bankInfo.textContent = "Bank Account Info:\nBank: Absa\nAccount Name: Empowering The Nation\nBranch: 000 000\nAccount Number: 0000 0000";
         }
 

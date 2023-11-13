@@ -16,6 +16,26 @@
         flex-wrap: wrap;
         gap: 20px;
     }
+    .book-now-button {
+    padding: 10px 20px; /* Button padding */
+    text-align: center; /* Center-align text */
+    font-size: 16px; /* Button font size */
+    margin: 10px 0; /* Add some margin for spacing */
+    cursor: pointer; /* Change cursor to pointer on hover */
+    --b: 3px; /* border thickness */
+  --s: 0.45em; /* size of the corner */
+  --color: #373b44;
+
+  padding: calc(0.5em + var(--s)) calc(0.9em + var(--s));
+  color: var(--color);
+  --_p: var(--s);
+  background: conic-gradient(
+      from 90deg at var(--b) var(--b),
+      #0000 90deg,
+      var(--color) 0
+    )
+
+  }
 
     .instructor {
         flex: 1;
@@ -90,95 +110,97 @@
 
 <div class="content">
 
-     <p style="text-align: center;">This course's purpose is to provide essential information on watering, pruning, and planting in a domestic garden (IIE, 2023). Participants will gain valuable insights into managing their garden, including optimizing water usage, understanding the watering needs of both indigenous and exotic plants, effective trimming techniques, and methods for propagating plants. Whether you're a seasoned gardener or just starting out, this course offers valuable knowledge for all enthusiasts.
- 
+     <p style="text-align: center; font-size: 22px;">This course covers crucial aspects of domestic gardening, including watering, pruning, and planting. Participants will learn to manage their gardens efficiently, with insights on optimizing water usage, addressing the needs of indigenous and exotic plants, mastering trimming techniques, and plant propagation methods. Whether you're a seasoned gardener or a beginner, this course provides valuable knowledge for all enthusiasts.
+   
      Join us for informative sessions covering a wide range of garden maintenance topics:
+    </p> 
+     <ul  style="font-size: 18px;">
+         <li>Efficient Watering: Learn to water your garden effectively for optimal plant growth and water conservation, considering the unique needs of different plant varieties.</li>
  
-     <ul>
-         <li>Watering Techniques: Learn how to efficiently water your garden to promote healthy plant growth while conserving water resources. Discover the unique watering requirements of different plant varieties.</li>
+         <li>Masterful Pruning: Perfect the art of pruning to ensure the health and shape of your plants, guided by our experts across various plant types.</li>
  
-         <li>Pruning Strategies: Master the art of pruning to maintain the shape and health of your plants. Our experts will guide you through the pruning process for various plant types.</li>
+         <li>Plant Propagation: Explore plant propagation techniques, from seeds to cuttings, to multiply your favorite plants and enhance your garden.</li>
  
-         <li>Propagation Methods: Explore the fascinating world of plant propagation. From seeds to cuttings, you'll gain insights into multiplying your favorite plants and expanding your garden.</li>
- 
-         <li>Planting Diversity: Diversify your garden with an array of plants. We'll provide guidance on planting techniques for different types of plants, helping you create a vibrant and thriving garden space.</li>
+         <li>Diverse Planting: Enhance your garden with a variety of plants using guidance on planting techniques for different types, creating a vibrant and thriving space.</li>
      </ul>
- 
-     Sessions are held every week, starting at 11:30 am and concluding at 1:00 pm on Monday, Tuesday, and Thursday. Our experienced instructors will walk you through each topic, offering practical tips and hands-on demonstrations.
- 
-     Whether you have a green thumb or are just getting started with gardening, our Garden Maintenance course will empower you with the knowledge and skills needed to create and maintain a beautiful and flourishing garden.
- 
-     Enroll today and embark on your journey to becoming a confident and successful gardener!
+     <p style="font-size: 18px;">
+     Join our weekly Garden Maintenance sessions, every Monday, Tuesday, and Thursday, from 11:30 am to 1:00 pm. Our expert instructors provide practical tips and hands-on demonstrations, empowering you with the skills to create and maintain a stunning garden. Enroll now to start your journey to gardening success!
      </p>
+     <h3>Fees:</h3>
+     <p  style="font-size: 18px;">R750</p>
+     <a href="check out.html"><button class="book-now-button" role="button">Book Now</button></a>
 
+     <br>
+ 
+ <img src="images\Gardening.jpg" alt="Garden maintenace" style="border-radius: 50%; width: 300px;"title="garden tools">
  <img src="images\IMG_7277.jpeg" alt="Garden maintenace" style="border-radius: 50%; width: 300px;"title="pruning trees">
- <img src="images\garden.jpg" alt="Garden maintenace" style="border-radius: 50%; width: 300px;"title="Watering plants">
- <img src="images\gardenMaintenance.jpg"  alt="Garden maintenace" style="border-radius: 50%; width: 300px;"title="Planting plants">
+ <img src="images\garden.jpg" alt="Garden maintenace" style="border-radius: 50%; width: 300px;"title="Watering plants"><!--Guaranteed Garden Services-->
+ <img src="images\gardenMaintenance.jpg"  alt="Garden maintenace" style="border-radius: 50%; width: 300px;"title="Planting plants"> <!--School of garden design-->
 </div>
-<h2>Instructor Profiles</h2>
+<div class="content">
+<div class="trick">
+  <div class="column">
+<h2>Instructor Profiles</h2><!--geeksforgeeks-->
   <div class="instructor-profiles">
 
     
-    <!-- Instructor 1 -->
+    <!--geeksforgeeks-->
     <div class="instructor">
-        <img src="images\Thabiso_Modise(G1).jpg" alt="Instructor 1" style="border-radius: 50%; width: 200px; height:200px;">
+        <img src="images\Thabiso_Modise(G1).jpg" alt="Instructor 1" style="border-radius: 50%; width: 200px; height:200px;"title="Thabiso Modise -Specialist in watering techniques"><!--scribd-->
         <h3>Thabiso Modise</h3>
-        <p>Thabiso specialises in Watering Techniques and with over 12 years of experience as a horticulturist, Thabiso is passionate about efficient watering practices. He has worked on various conservation projects and is known for his expertise in promoting healthy plant growth while conserving water resources.</p>
+        <p style="font-size: 18px;">Thabiso specialises in Watering Techniques and with over 12 years of experience as a horticulturist, Thabiso is passionate about efficient watering practices. He has worked on various conservation projects and is known for his expertise in promoting healthy plant growth while conserving water resources.</p>
     </div>
 
-    <!-- Instructor 2 -->
+<!--geeksforgeeks-->
     <div class="instructor">
-        <img src="images\David_Smalls(G2).jpg" alt="Instructor 2" style="border-radius: 50%; width: 200px; height:200px;">
+        <img src="images\David_Smalls(G2).jpg" alt="Instructor 2" style="border-radius: 50%; width: 200px; height:200px;"title="David Smalls -Professional gardener">
         <h3>David Smalls</h3>
-        <p>David has been a professional gardener for more than two decades. His skill in the art of pruning has transformed countless gardens. He will teach you the secrets of maintaining the shape and health of your plants through proper pruning.</p>
+        <p style="font-size: 18px;">David has been a professional gardener for more than two decades. His skill in the art of pruning has transformed countless gardens. He will teach you the secrets of maintaining the shape and health of your plants through proper pruning.</p>
     </div>
 
-    <!-- Instructor 3 -->
+  <!--geeksforgeeks-->
     <div class="instructor">
-        <img src="images\Emma_Hampton(G3).jpg" alt="Instructor 3" style="border-radius: 50%; width: 200px; height:200px;">
+        <img src="images\Emma_Hampton(G3).jpg" alt="Instructor 3" style="border-radius: 50%; width: 200px; height:200px;"title="Emma Hampton -Botanist">
         <h3>Emma Hampton</h3>
-        <p>Emma is a botanist and has extensive knowledge of plant propagation. She has conducted research on plant genetics and propagation techniques. Join her to explore the fascinating world of multiplying your favorite plants.</p>
+        <p style="font-size: 18px;">Emma is a botanist and has extensive knowledge of plant propagation. She has conducted research on plant genetics and propagation techniques. Join her to explore the fascinating world of multiplying your favorite plants. She also has a diverse background in landscaping and has created stunning gardens with a wide variety of plant species. She will guide you through planting techniques for different types of plants to create a vibrant and thriving garden space.</p>
     </div>
 
-    
-    <!-- Instructor 4 -->
-    <div class="instructor">
-      <img src="images\Veronisa_Tshawe(G4).jpg" alt="Instructor 4" style="border-radius: 50%; width: 200px; height:200px;">
-      <h3>Veronica Tshawe</h3>
-      <p>Veronica has a diverse background in landscaping and has created stunning gardens with a wide variety of plant species. She will guide you through planting techniques for different types of plants to create a vibrant and thriving garden space.</p>
   </div>
 </div>
+  </div>
+  </div>
+  </div>
+
 <div class="content">
-  <div class="trick">
-<div class="column">
-<h2>Student Testimonials</h2>
+<h2>Student Testimonials</h2><!--geeksforgeeks-->
 <div class="student-testimonials">
 
-  <!-- Testimonial 1 -->
+<!--geeksforgeeks-->
   <div class="testimonial">
-      <p>"I was a novice gardener before taking this course, but now I feel confident in my garden maintenance skills. The instructors provided clear guidance and practical tips. I especially loved Emma's lessons on propagation. Highly recommended!"</p>
-      <p style="font-weight: 700;"> -Lisa Q.</p>
+      <p style="font-size: 18px;">"I was a novice gardener before taking this course, but now I feel confident in my garden maintenance skills. The instructors provided clear guidance and practical tips. I especially loved Emma's lessons on propagation. Highly recommended!"</p>
+      <p style="font-weight: 700;font-size: 18px;"> -Lisa Q.</p>
   </div>
 
-  <!-- Testimonial 2 -->
+ <!--geeksforgeeks-->
   <div class="testimonial">
-      <p>"I've been gardening for years, and I thought I knew it all, but Sarah's lessons on efficient watering techniques completely changed the game. I now use less water and see better results whenever I garden. This course is a must for all garden enthusiasts."</p>
-      <p style="font-weight: 700;" > -Khosi S. </p>
+      <p style="font-size: 18px;">"I've been gardening for years, and I thought I knew it all, but Thabiso's lessons on efficient watering techniques completely changed the game. I now use less water and see better results whenever I garden. This course is a must for all garden enthusiasts."</p>
+      <p style="font-weight: 700;font-size: 18px;" > -Khosi S. </p>
   </div>
 
-  <!-- Testimonial 3 -->
+  <!--geeksforgeeks-->
   <div class="testimonial">
-      <p>"The Garden Maintenance course offers a comprehensive overview of everything you need to know to maintain a beautiful garden. The instructors are knowledgeable, and the hands-on demonstrations are incredibly helpful. I've already seen a significant improvement in my gardening skills."</p>
-      <p style="font-weight: 700;"> -Themba G.</p>
+      <p style="font-size: 18px;">"The Garden Maintenance course offers a comprehensive overview of everything you need to know to maintain a beautiful garden. The instructors are knowledgeable, and the hands-on demonstrations are incredibly helpful. I've already seen a significant improvement in my gardening skills."</p>
+      <p style="font-weight: 700;font-size: 18px;"> -Themba G.</p>
   </div>
 </div>
 </div>
+
 </div>
 </div>
 
 
+<a href="Cooking.html"><button class="button-89" role="button">Cooking</button></a>
 
-<a href="six week courses.html"><button class="button-89" role="button">BACK</button></a><a href="check out.html"><button class="button-89" role="button">BOOK NOW</button></a>
 
         </div>
     </body>
@@ -190,8 +212,14 @@
       document.write(" - Empowering Minds | Last modified: ")
       var theModifiedDate = new Date(document.lastModified)
       document.write(theModifiedDate.toDateString())
-  </script>
+    </script>
   <br>Powered by DUSK Web Hosting
-</footer>
-    
+
+    </footer>
+    </body>
 </html>
+<!--Reference list:-->
+<!--geeksforgeeks.[Online].Available at: https://www.geeksforgeeks.org/div-tag-html/ .Accessed 10 October 2023-->
+<!--w3schools.2023.[Online].Available at: https://www.w3schools.com/html/.Accessed 20 September 2023-->
+
+
