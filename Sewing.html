@@ -8,8 +8,14 @@
     <style type="text/css">
 
  /*(IIE, 2012) */ 
-
- .book-now-button {
+ /*(IIE, 2012) */ 
+ .instructor-profiles {
+        display: flex;
+        justify-content: space-around;
+        flex-wrap: wrap;
+        gap: 20px;
+    }
+    .book-now-button {
     padding: 10px 20px; /* Button padding */
     text-align: center; /* Center-align text */
     font-size: 16px; /* Button font size */
@@ -29,7 +35,33 @@
     )
 
   }
-        
+
+    .instructor {
+        flex: 1;
+        max-width: 300px;
+        border: 1px solid #ccc;
+        padding: 20px;
+        text-align: center;
+    }
+
+    .instructor img {
+        max-width: 100%;
+    }
+
+    .student-testimonials {
+        display: flex;
+        justify-content: space-around;
+        flex-wrap: wrap;
+        gap: 20px;
+    }
+
+    .testimonial {
+        flex: 1;
+        max-width: 300px;
+        border: 1px solid #ccc;
+        padding: 20px;
+        text-align: center;
+    }
         </style>
     </head>
     <body>
@@ -75,7 +107,7 @@
 
 <h1 class="h1">Sewing</h1>
 <div class="content">
-<p>This course includes professional guidance from fashion designers and it will focus on deepening and
+<p style="text-align: center; font-size: 22px;">This course includes professional guidance from fashion designers and it will focus on deepening and
    refreshing your skils on the sewing machine. You will learn the basics of fabric(cutting) and working
    with sewing patterns. It will also focus more on additional sewing techniques patterns. The courses includes 
    personal use of a sewing machine, mannequin and a working space. We also offer a library of designs with
@@ -84,7 +116,7 @@
    
   
 </p>
-<p>
+<p style="text-align: center; font-size: 20px;">
     The requirements of this course would only be grade9,since you would only need the skill and not much
     of an academic background. The Duration of this course is six months and after that you get your 
     certificate for completing the programme. The total course fees for the Sewing is R1500.
@@ -105,26 +137,28 @@
 <div class="instructor-profiles">
 
   <div class="instructor">
-    <img src="images\sewing1.jpg" alt="Instructor Karen Pyon" style="border-radius: 50%; width: 200px;"title="Karen Pyon">
+    <img src="images\sewing1.jpg" alt="Instructor Karen Pyon" style="border-radius: 50%; width: 200px; height:250px;"title="Karen Pyon">
     <h3>Karen Pyon</h3>
-        <p style="font-size: 18px;">I have been sewing and teaching for over 30 years and it is something I am truly passionate about. I am experienced in home decor, apparel and costuming.Over the past 3.5 years I have expanded my teaching all across the country one on on one virtual with many success stories.</p>
+        <p style="font-size: 20px;">I have been sewing and teaching for over 30 years and it is something I am truly passionate about. I am experienced in home decor, apparel and costuming.Over the past 3.5 years I have expanded my teaching all across the country one on on one virtual with many success stories.</p>
         </div>
 
         <div class="instructor">
-          <img src="images\sewing2.jpg" alt="Instructor Samantha Brown" style="border-radius: 50%; width: 200px;"title="Samantha Brown">
+          <img src="images\sewing2.jpg" alt="Instructor Samantha Brown" style="border-radius: 50%; width: 200px; height:200px;"title="Samantha Brown">
           <h3>Samantha Brown</h3>
-              <p style="font-size: 18px;">I have been teaching sewing professionally since 2010. I've helped hundreds of people in Empowering The Nation - - learn to love sewing, acquire a new skill, and express their creativity!</p>
+              <p style="font-size: 20px;">I have been teaching sewing professionally since 2010. I've helped hundreds of people in Empowering The Nation - - learn to love sewing, acquire a new skill, and express their creativity!</p>
               </div>
 
               <div class="instructor">
-                <img src="images\sewing3.jpg" alt="Instructor Liesel Neff" style="border-radius: 50%; width: 200px;"title="Chef Liesel Neff">
+                <img src="images\sewing3.jpg" alt="Instructor Liesel Neff" style="border-radius: 50%; width: 200px; height:200px;"title="Chef Liesel Neff">
                 <h3>Liesel Neff</h3>
-                    <p style="font-size: 18px;"> I have been sewing for 40+ years. It is a gift that I use to satisfy my students needs. As a seamstress, the most rewarding feeling is seeing the look of satisfaction on a students face. Now I come to enjoy teaching my skill to others who have the desire to learn how to sew. It is a lost unique skill that is functional and rewarding once mastered.</p>
-                    </div>
+                    <p style="font-size: 20px;"> I have been sewing for 40+ years. It is a gift that I use to satisfy my students needs. As a seamstress, the most rewarding feeling is seeing the look of satisfaction on a students face. Now I come to enjoy teaching my skill to others who have the desire to learn how to sew. It is a lost unique skill that is functional and rewarding once mastered.</p>
+                  </div>
 
-
-
-</div>
+                </div>
+              </div>
+                </div>
+                </div>
+                </div>
 <div class="content">
   <h2>Student Testimonials</h2>
   <div class="student-testimonials">
@@ -143,9 +177,11 @@
   <p style="font-size: 18px;">Thank you so much for all your help and advice to help me make my curtains.  Having never touched a sewing machine before, I could’nt have imagined making anything like this three months ago.  A new found love for life!</p>
   <p style="font-weight: 700;font-size: 18px;"> - Rachel </p>
 </div>
+</div>
+</div>
 
-
-        </div>
+</div>
+</div>
         <a href="First Aid.html"><button class="button-89" role="button">First Aid</button></a><a href="Landscaping.html"><button class="button-89" role="button">Landscaping</button></a>
     </body>
 <footer>
@@ -159,3 +195,6 @@
   <br>Powered by DUSK Web Hosting
 </footer>
 </html>
+<!--Reference List:-->
+<!--geeksforgeeks. 2023.[Online].Availale at: https://www.geeksforgeeks.org/div-tag-html/ .Accessed 10 October 2023-->
+<!--w3schools.2023.[Online].Availale at:https://www.w3schools.com/html/html_div.asp .Accessed 10 October 2023 -->

@@ -8,9 +8,14 @@
     <style type="text/css">
 
  /*(IIE, 2012) */ 
-
- 
- .book-now-button {
+ /*(IIE, 2012) */ 
+ .instructor-profiles {
+        display: flex;
+        justify-content: space-around;
+        flex-wrap: wrap;
+        gap: 20px;
+    }
+    .book-now-button {
     padding: 10px 20px; /* Button padding */
     text-align: center; /* Center-align text */
     font-size: 16px; /* Button font size */
@@ -30,7 +35,33 @@
     )
 
   }
-        </style>
+
+    .instructor {
+        flex: 1;
+        max-width: 300px;
+        border: 1px solid #ccc;
+        padding: 20px;
+        text-align: center;
+    }
+
+    .instructor img {
+        max-width: 100%;
+    }
+
+    .student-testimonials {
+        display: flex;
+        justify-content: space-around;
+        flex-wrap: wrap;
+        gap: 20px;
+    }
+
+    .testimonial {
+        flex: 1;
+        max-width: 300px;
+        border: 1px solid #ccc;
+        padding: 20px;
+        text-align: center;
+    }    </style>
     </head>
     <body>
         <div class="background">
@@ -74,7 +105,7 @@
 
 <h1 class="h1">Life Skills</h1>
 <div class="content">
-<p>
+<p style="font-size: 20px;">
    Navigating the the different aspects of everyday life requires plenty of practical skills. Problem solving,
    cooking skills, basic comunication, general health maintenance and similar abilities enable individuals to
    function effectively and meet the demands of modern life. Important traits like independence, problem-solving 
@@ -84,7 +115,7 @@
    on your age, stage of life, and career objectives. No matter where you are in life, you can keep on top of your
    personal development with Empowering The Nation.
 </p>
-<p>
+<p style="font-size: 18px;">
     Interested in acquiring new life skills to meet personal demands and increase employability? Empowering the
     Nation offers just that for you. This course covers a lot of topics and ou can enroll and get a degree in a
     relevant topic. The duration of this course is six months at the cost of a once of payment of R1500. However,
@@ -106,13 +137,13 @@
 <div class="instructor-profiles">
 
   <div class="instructor">
-    <img src="images\LifeSkills3.jpg" alt="Instructor Kathryn Druskoff" style="border-radius: 50%; width: 200px;"title="Kathryn Druskoff">
+    <img src="images\LifeSkills3.jpg" alt="Instructor Kathryn Druskoff" style="border-radius: 50%; width: 200px; height:500px;"title="Kathryn Druskoff">
     <h3>Kathryn Druskoff</h3>
         <p style="font-size: 18px;">Kathryn Druskoff holds a Bachelor's degree from Wellesley College, a Master's degree in Education from Simmons College, and advanced studies in Social Work, Counseling and Special Education. Kathryn is experienced working therapeutically with children, adolescents and adults teaching coping skills, social skills, self-regulation and executive functioning skills. She has been trained in Adaptive Behavioral Therapy for remapping of neurological pathways. She is a certified Special Education teacher in Empowering The Nation with more than 15 years of experience.</p>
         </div>
 
         <div class="instructor">
-          <img src="images\LifeSkills2.jpg" alt="Instructor Christie Linley" style="border-radius: 50%; width: 200px;"title="Christie Linley">
+          <img src="images\LifeSkills2.jpg" alt="Instructor Christie Linley" style="border-radius: 50%;  width: 200px; height:300px;"title="Christie Linley">
           <h3>Christie Linley</h3>
               <p style="font-size: 18px;">As a life coach in Empowering The Nation, I provide tools and insights that give clarity to help you move forward both personally and professionally. Whether you are going through a transition, you want something different, you feel stuck, confused or you are in pain you are welcome to come and explore and find your answers in a process that is both motivating, empowering and initiates choice.
 
@@ -120,13 +151,16 @@
               </div>
 
               <div class="instructor">
-                <img src="images\LifeSkills1.jpg" alt="Instructor Naomi Richards " style="border-radius: 50%; width: 200px;"title="Naomi Richards ">
+                <img src="images\LifeSkills1.jpg" alt="Instructor Naomi Richards " style="border-radius: 50%; width: 200px; height:300px;"title="Naomi Richards ">
                 <h3>Naomi Richards </h3>
                     <p style="font-size: 18px;">I love being a coach for students. I enjoy seeing the progress students make whilst they are working with me and seeing their confidence soar as we work together. It is so satisfying to see them implement new ideas, gain tools, change situations for the better and see them becoming happier, more relaxed students. I do this by showing them there is more than one way to solve a problem.</p>
-                    </div>
+                  </div>
 
-
-</div>
+                </div>
+              </div>
+                </div>
+                </div>
+                </div>
 <div class="content">
   <h2>Student Testimonials</h2>
   <div class="student-testimonials">
@@ -144,11 +178,12 @@
 <div class="testimonial">
   <p style="font-size: 18px;">This program has actually made my second period of the day (LifeSkills) fun!!! It is much more interesting than I expected and I would reccommend this program to any life skills coach</p>
   <p style="font-weight: 700;font-size: 18px;"> - Audrey H </p>
-</div> 
+</div>
+</div>
+</div>
 
-
-
-        </div>
+</div>
+</div>
         <a href="Landscaping.html"><button class="button-89" role="button">Landscaping</button>
         </body>
         <footer>
@@ -162,3 +197,6 @@
           <br>Powered by DUSK Web Hosting
         </footer>
         </html>
+<!--Reference List:-->
+<!--geeksforgeeks. 2023.[Online].Availale at: https://www.geeksforgeeks.org/div-tag-html/ .Accessed 10 October 2023-->
+<!--w3schools.2023.[Online].Availale at:https://www.w3schools.com/html/html_div.asp .Accessed 10 October 2023 -->
